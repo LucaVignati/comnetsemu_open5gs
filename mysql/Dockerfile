@@ -30,7 +30,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install updates and dependencies
 RUN apt-get update && \
-    apt-get -y install mysql-server ca-certificates
+    apt-get -y install mysql-server ca-certificates net-tools iproute2 iputils-ping
 
 ADD mysql_init.sh /mysql_init.sh
 RUN chmod 755 /mysql_init.sh

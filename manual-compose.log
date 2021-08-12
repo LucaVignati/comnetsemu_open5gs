@@ -1,0 +1,1124 @@
+mkdir: cannot create directory ‘mongodbdata’: File exists
+mkdir: cannot create directory ‘dbdata’: File exists
+Error response from daemon: network with name docker_open5gs_default already exists
+Deploying component: 'ausf-1'
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:28.123[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/ausf.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:28.123[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/ausf.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:28.124[0m: [[33msbi[0m] [1;32mINFO[0m: nghttp2_server() [172.22.0.11]:7777 (../lib/sbi/nghttp2-server.c:144)
+[32m07/20 15:29:28.130[0m: [[33mapp[0m] [1;32mINFO[0m: AUSF initialize...done (../src/ausf/app.c:31)
+Deploying component: 'webui'
+Deploying component: 'nrf-1'
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:31.155[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/nrf.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:31.155[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/nrf.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:31.155[0m: [[33msbi[0m] [1;32mINFO[0m: nghttp2_server() [172.22.0.12]:7777 (../lib/sbi/nghttp2-server.c:144)
+[32m07/20 15:29:31.155[0m: [[33mapp[0m] [1;32mINFO[0m: NRF initialize...done (../src/nrf/app.c:31)
+[32m07/20 15:29:31.193[0m: [[33msbi[0m] [1;36mWARNING[0m: [7] Failed to connect to 172.22.0.12 port 7777: No route to host (../lib/sbi/client.c:476)
+Deploying component: 'udr-1'
+Deploying component: 'udm-1'
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:33.104[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/udm.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:33.104[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/udm.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:33.105[0m: [[33msbi[0m] [1;32mINFO[0m: nghttp2_server() [172.22.0.13]:7777 (../lib/sbi/nghttp2-server.c:144)
+[32m07/20 15:29:33.105[0m: [[33mapp[0m] [1;32mINFO[0m: UDM initialize...done (../src/udm/app.c:31)
+[32m07/20 15:29:33.107[0m: [[33mnrf[0m] [1;32mINFO[0m: [4872c2a0-e96f-41eb-a148-b303d43bb8c0] NF registred [Heartbeat:10s] (../src/nrf/nf-sm.c:192)
+[32m07/20 15:29:33.112[0m: [[33mudm[0m] [1;32mINFO[0m: [4872c2a0-e96f-41eb-a148-b303d43bb8c0] NF registred [Heartbeat:10s] (../src/udm/nf-sm.c:198)
+Deploying component: 'pcf-1'
+Deploying component: 'bsf-1'
+Deploying component: 'nssf-1'
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:36.122[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/nssf.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:36.122[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/nssf.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:36.123[0m: [[33msbi[0m] [1;32mINFO[0m: nghttp2_server() [172.22.0.28]:7777 (../lib/sbi/nghttp2-server.c:144)
+[32m07/20 15:29:36.123[0m: [[33mapp[0m] [1;32mINFO[0m: NSSF initialize...done (../src/nssf/app.c:31)
+[32m07/20 15:29:36.124[0m: [[33mnrf[0m] [1;32mINFO[0m: [4a3f42b6-e96f-41eb-aaf7-67189c57bf5a] NF registred [Heartbeat:10s] (../src/nrf/nf-sm.c:192)
+[32m07/20 15:29:36.124[0m: [[33mnssf[0m] [1;32mINFO[0m: [4a3f42b6-e96f-41eb-aaf7-67189c57bf5a] NF registred [Heartbeat:10s] (../src/nssf/nf-sm.c:198)
+Deploying component: 'smf-1'
+Generating a RSA private key
+...+++++
+......+++++
+writing new private key to 'cakey.pem'
+-----
+Generating RSA private key, 1024 bit long modulus (2 primes)
+.........................................................+++++
+.+++++
+e is 65537 (0x010001)
+Using configuration from /usr/lib/ssl/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 1 (0x1)
+        Validity
+            Not Before: Jul 20 15:29:37 2021 GMT
+            Not After : Jul 18 15:29:37 2031 GMT
+        Subject:
+            countryName               = KO
+            stateOrProvinceName       = Seoul
+            organizationName          = Open5GS
+            organizationalUnitName    = Tests
+            commonName                = mme.epc.mnc001.mcc001.3gppnetwork.org
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                30:B3:D1:C7:24:7D:D5:83:BD:0A:E0:94:E6:8E:7F:7F:C9:E3:81:32
+            X509v3 Authority Key Identifier: 
+                keyid:AE:37:C5:81:0D:12:05:53:3C:DA:4E:0B:4E:97:80:AF:11:47:F7:E0
+
+Certificate is to be certified until Jul 18 15:29:37 2031 GMT (3650 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Generating RSA private key, 1024 bit long modulus (2 primes)
+........+++++
+.......................+++++
+e is 65537 (0x010001)
+Using configuration from /usr/lib/ssl/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 2 (0x2)
+        Validity
+            Not Before: Jul 20 15:29:37 2021 GMT
+            Not After : Jul 18 15:29:37 2031 GMT
+        Subject:
+            countryName               = KO
+            stateOrProvinceName       = Seoul
+            organizationName          = Open5GS
+            organizationalUnitName    = Tests
+            commonName                = hss.epc.mnc001.mcc001.3gppnetwork.org
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                78:13:91:CE:FE:CC:D6:3F:EB:8D:F3:BD:46:99:C6:D2:EB:5D:51:BE
+            X509v3 Authority Key Identifier: 
+                keyid:AE:37:C5:81:0D:12:05:53:3C:DA:4E:0B:4E:97:80:AF:11:47:F7:E0
+
+Certificate is to be certified until Jul 18 15:29:37 2031 GMT (3650 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Generating RSA private key, 1024 bit long modulus (2 primes)
+...........................+++++
+....................+++++
+e is 65537 (0x010001)
+Using configuration from /usr/lib/ssl/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 3 (0x3)
+        Validity
+            Not Before: Jul 20 15:29:37 2021 GMT
+            Not After : Jul 18 15:29:37 2031 GMT
+        Subject:
+            countryName               = KO
+            stateOrProvinceName       = Seoul
+            organizationName          = Open5GS
+            organizationalUnitName    = Tests
+            commonName                = smf.epc.mnc001.mcc001.3gppnetwork.org
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                03:E7:9E:3E:86:90:D1:33:D6:83:E8:8D:74:9E:69:48:37:43:8A:72
+            X509v3 Authority Key Identifier: 
+                keyid:AE:37:C5:81:0D:12:05:53:3C:DA:4E:0B:4E:97:80:AF:11:47:F7:E0
+
+Certificate is to be certified until Jul 18 15:29:37 2031 GMT (3650 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Generating RSA private key, 1024 bit long modulus (2 primes)
+................+++++
+............................................................+++++
+e is 65537 (0x010001)
+Using configuration from /usr/lib/ssl/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 4 (0x4)
+        Validity
+            Not Before: Jul 20 15:29:37 2021 GMT
+            Not After : Jul 18 15:29:37 2031 GMT
+        Subject:
+            countryName               = KO
+            stateOrProvinceName       = Seoul
+            organizationName          = Open5GS
+            organizationalUnitName    = Tests
+            commonName                = pcrf.epc.mnc001.mcc001.3gppnetwork.org
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                1A:C9:5B:BD:73:F0:AC:73:84:12:F2:91:70:93:95:3D:FB:9E:D2:7D
+            X509v3 Authority Key Identifier: 
+                keyid:AE:37:C5:81:0D:12:05:53:3C:DA:4E:0B:4E:97:80:AF:11:47:F7:E0
+
+Certificate is to be certified until Jul 18 15:29:37 2031 GMT (3650 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:37.263[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/smf.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:37.263[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/smf.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:37.330[0m: [[33mgtp[0m] [1;32mINFO[0m: gtp_server() [172.22.0.7]:2123 (../lib/gtp/path.c:30)
+[32m07/20 15:29:37.330[0m: [[33mgtp[0m] [1;32mINFO[0m: gtp_server() [172.22.0.7]:2152 (../lib/gtp/path.c:30)
+[32m07/20 15:29:37.330[0m: [[33mpfcp[0m] [1;32mINFO[0m: pfcp_server() [172.22.0.7]:8805 (../lib/pfcp/path.c:30)
+[32m07/20 15:29:37.330[0m: [[33mpfcp[0m] [1;32mINFO[0m: ogs_pfcp_connect() [172.22.0.8]:8805 (../lib/pfcp/path.c:59)
+[32m07/20 15:29:37.330[0m: [[33msbi[0m] [1;32mINFO[0m: nghttp2_server() [172.22.0.7]:7777 (../lib/sbi/nghttp2-server.c:144)
+[32m07/20 15:29:37.331[0m: [[33mapp[0m] [1;32mINFO[0m: SMF initialize...done (../src/smf/app.c:31)
+[32m07/20 15:29:37.331[0m: [[33mnrf[0m] [1;32mINFO[0m: [4aee0ddc-e96f-41eb-b75b-ef7cd63f9d02] NF registred [Heartbeat:10s] (../src/nrf/nf-sm.c:192)
+[32m07/20 15:29:37.332[0m: [[33msmf[0m] [1;32mINFO[0m: [4aee0ddc-e96f-41eb-b75b-ef7cd63f9d02] NF registred [Heartbeat:10s] (../src/smf/nf-sm.c:199)
+Deploying component: 'upf-1'
+RTNETLINK answers: Permission denied
+ip6tables v1.8.4 (legacy): can't initialize ip6tables table `nat': Table does not exist (do you need to insmod?)
+Perhaps ip6tables or your kernel needs to be upgraded.
+ip6tables v1.8.4 (legacy): can't initialize ip6tables table `filter': Table does not exist (do you need to insmod?)
+Perhaps ip6tables or your kernel needs to be upgraded.
+RTNETLINK answers: Permission denied
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:38.284[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:38.284[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:38.288[0m: [[33mpfcp[0m] [1;32mINFO[0m: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+[32m07/20 15:29:38.288[0m: [[33mpfcp[0m] [1;32mINFO[0m: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:59)
+[32m07/20 15:29:38.289[0m: [[33mgtp[0m] [1;32mINFO[0m: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+[32m07/20 15:29:38.289[0m: [[33msock[0m] [1;33mERROR[0m: ogs_link_local_addr_by_dev() failed (../lib/core/ogs-sockaddr.c:296)
+[32m07/20 15:29:38.289[0m: [[33msmf[0m] [1;32mINFO[0m: PFCP associated (../src/smf/pfcp-sm.c:174)
+[32m07/20 15:29:38.289[0m: [[33msock[0m] [1;33mERROR[0m: ogs_link_local_addr_by_dev() failed (../lib/core/ogs-sockaddr.c:296)
+[32m07/20 15:29:38.289[0m: [[33mapp[0m] [1;32mINFO[0m: UPF initialize...done (../src/upf/app.c:31)
+[32m07/20 15:29:38.289[0m: [[33mupf[0m] [1;32mINFO[0m: PFCP associated (../src/upf/pfcp-sm.c:173)
+[32m07/20 15:29:38.289[0m: [[33mupf[0m] [1;36mWARNING[0m: PFCP[RSP] has already been associated (../src/upf/pfcp-sm.c:207)
+[32m07/20 15:29:38.289[0m: [[33msmf[0m] [1;36mWARNING[0m: PFCP[RSP] has already been associated (../src/smf/pfcp-sm.c:208)
+Deploying component: 'hss-1'
+Generating a RSA private key
+.[32m07/20 15:29:39.129[0m: [[33mausf[0m] [1;36mWARNING[0m: [457aa932-e96f-41eb-8a87-7f52eae63df2] Retry to registration with NRF (../src/ausf/nf-sm.c:161)
+..+++++
+.......[32m07/20 15:29:39.130[0m: [[33mnrf[0m] [1;32mINFO[0m: [457aa932-e96f-41eb-8a87-7f52eae63df2] NF registred [Heartbeat:10s] (../src/nrf/nf-sm.c:192)
+.[32m07/20 15:29:39.130[0m: [[33mausf[0m] [1;32mINFO[0m: [457aa932-e96f-41eb-8a87-7f52eae63df2] NF registred [Heartbeat:10s] (../src/ausf/nf-sm.c:198)
+............................................+++++
+writing new private key to 'cakey.pem'
+-----
+Generating RSA private key, 1024 bit long modulus (2 primes)
+..............+++++
+....................+++++
+e is 65537 (0x010001)
+Using configuration from /usr/lib/ssl/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 1 (0x1)
+        Validity
+            Not Before: Jul 20 15:29:39 2021 GMT
+            Not After : Jul 18 15:29:39 2031 GMT
+        Subject:
+            countryName               = KO
+            stateOrProvinceName       = Seoul
+            organizationName          = Open5GS
+            organizationalUnitName    = Tests
+            commonName                = hss.epc.mnc001.mcc001.3gppnetwork.org
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                E2:A6:57:0D:14:41:86:23:D8:E2:B9:E0:1D:44:58:22:0B:48:06:2D
+            X509v3 Authority Key Identifier: 
+                keyid:F3:95:06:82:7B:53:05:3F:4C:93:BC:18:65:66:BA:A4:AC:26:D8:0A
+
+Certificate is to be certified until Jul 18 15:29:39 2031 GMT (3650 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Deploying component: 'sgwc-1'
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:40.158[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/sgwc.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:40.158[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/sgwc.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:40.162[0m: [[33mgtp[0m] [1;32mINFO[0m: gtp_server() [172.22.0.5]:2123 (../lib/gtp/path.c:30)
+[32m07/20 15:29:40.162[0m: [[33mpfcp[0m] [1;32mINFO[0m: pfcp_server() [172.22.0.5]:8805 (../lib/pfcp/path.c:30)
+[32m07/20 15:29:40.162[0m: [[33mpfcp[0m] [1;32mINFO[0m: ogs_pfcp_connect() [172.22.0.6]:8805 (../lib/pfcp/path.c:59)
+[32m07/20 15:29:40.162[0m: [[33mapp[0m] [1;32mINFO[0m: SGW-C initialize...done (../src/sgwc/app.c:31)
+
+> open5gs@2.2.8 dev /open5gs/webui
+> node server/index.js
+
+Deploying component: 'sgwu-1'
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:41.217[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/sgwu.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:41.217[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/sgwu.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:41.222[0m: [[33mpfcp[0m] [1;32mINFO[0m: pfcp_server() [172.22.0.6]:8805 (../lib/pfcp/path.c:30)
+[32m07/20 15:29:41.222[0m: [[33mpfcp[0m] [1;32mINFO[0m: ogs_pfcp_connect() [172.22.0.5]:8805 (../lib/pfcp/path.c:59)
+[32m07/20 15:29:41.222[0m: [[33mgtp[0m] [1;32mINFO[0m: gtp_server() [172.22.0.6]:2152 (../lib/gtp/path.c:30)
+[32m07/20 15:29:41.222[0m: [[33mapp[0m] [1;32mINFO[0m: SGW-U initialize...done (../src/sgwu/app.c:31)
+[32m07/20 15:29:41.222[0m: [[33msgwu[0m] [1;32mINFO[0m: PFCP associated (../src/sgwu/pfcp-sm.c:168)
+[32m07/20 15:29:41.222[0m: [[33msgwc[0m] [1;32mINFO[0m: PFCP associated (../src/sgwc/pfcp-sm.c:172)
+Deploying component: 'amf-1'
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:42.115[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/udr.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:42.115[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/udr.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:42.119[0m: [[33mdbi[0m] [1;32mINFO[0m: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+[32m07/20 15:29:42.119[0m: [[33msbi[0m] [1;32mINFO[0m: nghttp2_server() [172.22.0.14]:7777 (../lib/sbi/nghttp2-server.c:144)
+[32m07/20 15:29:42.119[0m: [[33mapp[0m] [1;32mINFO[0m: UDR initialize...done (../src/udr/app.c:31)
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:42.120[0m: [[33mnrf[0m] [1;32mINFO[0m: [4dd1bd46-e96f-41eb-a6c3-8fa54df752cf] NF registred [Heartbeat:10s] (../src/nrf/nf-sm.c:192)
+[32m07/20 15:29:42.120[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/amf.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:42.120[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/amf.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:42.120[0m: [[33mudm[0m] [1;32mINFO[0m: [4dd1bd46-e96f-41eb-a6c3-8fa54df752cf] (NRF-notify) NF registered (../src/udm/nnrf-handler.c:184)
+[32m07/20 15:29:42.120[0m: [[33mudm[0m] [1;32mINFO[0m: [4dd1bd46-e96f-41eb-a6c3-8fa54df752cf] (NRF-notify) NF Profile updated (../src/udm/nnrf-handler.c:203)
+[32m07/20 15:29:42.121[0m: [[33mudr[0m] [1;32mINFO[0m: [4dd1bd46-e96f-41eb-a6c3-8fa54df752cf] NF registred [Heartbeat:10s] (../src/udr/nf-sm.c:198)
+[32m07/20 15:29:42.122[0m: [[33msbi[0m] [1;32mINFO[0m: nghttp2_server() [172.22.0.10]:7777 (../lib/sbi/nghttp2-server.c:144)
+[32m07/20 15:29:42.122[0m: [[33mamf[0m] [1;32mINFO[0m: ngap_server() [172.22.0.10]:38412 (../src/amf/ngap-sctp.c:53)
+[32m07/20 15:29:42.123[0m: [[33msctp[0m] [1;32mINFO[0m: AMF initialize...done (../src/amf/app.c:33)
+[32m07/20 15:29:42.124[0m: [[33mnrf[0m] [1;32mINFO[0m: [4dd2709c-e96f-41eb-89c9-575fa3491a4d] NF registred [Heartbeat:10s] (../src/nrf/nf-sm.c:192)
+[32m07/20 15:29:42.125[0m: [[33msmf[0m] [1;32mINFO[0m: [4dd2709c-e96f-41eb-89c9-575fa3491a4d] (NRF-notify) NF registered (../src/smf/nnrf-handler.c:184)
+[32m07/20 15:29:42.125[0m: [[33msmf[0m] [1;32mINFO[0m: [4dd2709c-e96f-41eb-89c9-575fa3491a4d] (NRF-notify) NF Profile updated (../src/smf/nnrf-handler.c:203)
+[32m07/20 15:29:42.125[0m: [[33mamf[0m] [1;32mINFO[0m: [4dd2709c-e96f-41eb-89c9-575fa3491a4d] NF registred [Heartbeat:10s] (../src/amf/nf-sm.c:198)
+> Using external babel configuration
+> Location: "/open5gs/webui/.babelrc"
+[32m07/20 15:29:42.664[0m: [[33msgwu[0m] [1;36mWARNING[0m: PFCP[REQ] has already been associated (../src/sgwu/pfcp-sm.c:197)
+[32m07/20 15:29:42.664[0m: [[33msgwc[0m] [1;36mWARNING[0m: PFCP[RSP] has already been associated (../src/sgwc/pfcp-sm.c:206)
+Deploying component: 'mme-1'
+Generating a RSA private key
+..............+++++
+.......+++++
+writing new private key to 'cakey.pem'
+-----
+Generating RSA private key, 1024 bit long modulus (2 primes)
+.....+++++
+.......................+++++
+e is 65537 (0x010001)
+Using configuration from /usr/lib/ssl/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 1 (0x1)
+        Validity
+            Not Before: Jul 20 15:29:43 2021 GMT
+            Not After : Jul 18 15:29:43 2031 GMT
+        Subject:
+            countryName               = KO
+            stateOrProvinceName       = Seoul
+            organizationName          = Open5GS
+            organizationalUnitName    = Tests
+            commonName                = mme.epc.mnc001.mcc001.3gppnetwork.org
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                1C:FF:49:DF:D5:27:7E:64:8D:16:FB:6C:23:50:7F:C6:9D:DF:18:CC
+            X509v3 Authority Key Identifier: 
+                keyid:7D:94:E0:91:E0:C5:44:76:F0:A4:E5:1A:4B:11:C0:BC:54:2D:E7:B1
+
+Certificate is to be certified until Jul 18 15:29:43 2031 GMT (3650 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:43.235[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/mme.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:43.235[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/mme.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:43.276[0m: [[33mgtp[0m] [1;32mINFO[0m: gtp_server() [172.22.0.9]:2123 (../lib/gtp/path.c:30)
+[32m07/20 15:29:43.277[0m: [[33mgtp[0m] [1;32mINFO[0m: gtp_connect() [172.22.0.5]:2123 (../lib/gtp/path.c:58)
+[32m07/20 15:29:43.277[0m: [[33mmme[0m] [1;32mINFO[0m: s1ap_server() [172.22.0.9]:36412 (../src/mme/s1ap-sctp.c:54)
+[32m07/20 15:29:43.277[0m: [[33msctp[0m] [1;32mINFO[0m: MME initialize...done (../src/mme/app-init.c:33)
+ DONE  Compiled successfully in 1458ms3:29:43 PM
+
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:44.117[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/pcf.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:44.117[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/pcf.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:44.119[0m: [[33mdbi[0m] [1;32mINFO[0m: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+[32m07/20 15:29:44.119[0m: [[33msbi[0m] [1;32mINFO[0m: nghttp2_server() [172.22.0.27]:7777 (../lib/sbi/nghttp2-server.c:144)
+[32m07/20 15:29:44.119[0m: [[33mapp[0m] [1;32mINFO[0m: PCF initialize...done (../src/pcf/app.c:31)
+[32m07/20 15:29:44.120[0m: [[33mnrf[0m] [1;32mINFO[0m: [4f0328e4-e96f-41eb-a664-a76623c0a040] NF registred [Heartbeat:10s] (../src/nrf/nf-sm.c:192)
+[32m07/20 15:29:44.121[0m: [[33msmf[0m] [1;32mINFO[0m: [4f0328e4-e96f-41eb-a664-a76623c0a040] (NRF-notify) NF registered (../src/smf/nnrf-handler.c:184)
+[32m07/20 15:29:44.121[0m: [[33msmf[0m] [1;32mINFO[0m: [4f0328e4-e96f-41eb-a664-a76623c0a040] (NRF-notify) NF Profile updated (../src/smf/nnrf-handler.c:203)
+[32m07/20 15:29:44.122[0m: [[33mamf[0m] [1;32mINFO[0m: [4f0328e4-e96f-41eb-a664-a76623c0a040] (NRF-notify) NF registered (../src/amf/nnrf-handler.c:186)
+[32m07/20 15:29:44.122[0m: [[33mamf[0m] [1;32mINFO[0m: [4f0328e4-e96f-41eb-a664-a76623c0a040] (NRF-notify) NF Profile updated (../src/amf/nnrf-handler.c:205)
+[32m07/20 15:29:44.122[0m: [[33mpcf[0m] [1;32mINFO[0m: [4f0328e4-e96f-41eb-a664-a76623c0a040] NF registred [Heartbeat:10s] (../src/pcf/nf-sm.c:198)
+[0;36mMongoose:[0m accounts.count({}, {})
+Deploying component: 'pcrf-1'
+[0;36mMongoose:[0m subscribers.ensureIndex({ imsi: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[0;36mMongoose:[0m accounts.ensureIndex({ username: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+> Ready on http://3fdec178124f:3000
+Generating a RSA private key
+....+++++
+.................+++++
+writing new private key to 'cakey.pem'
+-----
+Generating RSA private key, 1024 bit long modulus (2 primes)
+...............................................+++++
+.................................................+++++
+e is 65537 (0x010001)
+Using configuration from /usr/lib/ssl/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 1 (0x1)
+        Validity
+            Not Before: Jul 20 15:29:44 2021 GMT
+            Not After : Jul 18 15:29:44 2031 GMT
+        Subject:
+            countryName               = KO
+            stateOrProvinceName       = Seoul
+            organizationName          = Open5GS
+            organizationalUnitName    = Tests
+            commonName                = pcrf.epc.mnc001.mcc001.3gppnetwork.org
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                D7:1F:50:E1:FC:7A:02:2E:EF:A6:8B:93:A1:C9:17:FE:A8:F3:D4:EF
+            X509v3 Authority Key Identifier: 
+                keyid:91:6F:A1:59:C9:30:C3:84:B7:BB:A4:EC:33:8C:A3:69:77:4F:14:31
+
+Certificate is to be certified until Jul 18 15:29:44 2031 GMT (3650 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:45.133[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/bsf.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:45.133[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/bsf.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:45.133[0m: [[33msbi[0m] [1;32mINFO[0m: nghttp2_server() [172.22.0.29]:7777 (../lib/sbi/nghttp2-server.c:144)
+[32m07/20 15:29:45.134[0m: [[33mapp[0m] [1;32mINFO[0m: BSF initialize...done (../src/bsf/app.c:31)
+[32m07/20 15:29:45.134[0m: [[33mnrf[0m] [1;32mINFO[0m: [4f9e1fa2-e96f-41eb-aa15-37ed4d817bd7] NF registred [Heartbeat:10s] (../src/nrf/nf-sm.c:192)
+[32m07/20 15:29:45.135[0m: [[33mpcf[0m] [1;32mINFO[0m: [4f9e1fa2-e96f-41eb-aa15-37ed4d817bd7] (NRF-notify) NF registered (../src/pcf/nnrf-handler.c:184)
+[32m07/20 15:29:45.135[0m: [[33mpcf[0m] [1;32mINFO[0m: [4f9e1fa2-e96f-41eb-aa15-37ed4d817bd7] (NRF-notify) NF Profile updated (../src/pcf/nnrf-handler.c:203)
+[32m07/20 15:29:45.135[0m: [[33mbsf[0m] [1;32mINFO[0m: [4f9e1fa2-e96f-41eb-aa15-37ed4d817bd7] NF registred [Heartbeat:10s] (../src/bsf/nf-sm.c:199)
+20-Jul-2021 15:29:45.220 starting BIND 9.16.1-Ubuntu (Stable Release) <id:d497c32>
+20-Jul-2021 15:29:45.220 running on Linux x86_64 5.4.70-050470-generic #202010070732 SMP Wed Oct 7 07:57:27 UTC 2020
+20-Jul-2021 15:29:45.220 built with '--build=x86_64-linux-gnu' '--prefix=/usr' '--includedir=/usr/include' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-silent-rules' '--libdir=/usr/lib/x86_64-linux-gnu' '--runstatedir=/run' '--disable-maintainer-mode' '--disable-dependency-tracking' '--libdir=/usr/lib/x86_64-linux-gnu' '--sysconfdir=/etc/bind' '--with-python=python3' '--localstatedir=/' '--enable-threads' '--enable-largefile' '--with-libtool' '--enable-shared' '--enable-static' '--with-gost=no' '--with-openssl=/usr' '--with-gssapi=/usr' '--with-libidn2' '--with-json-c' '--with-lmdb=/usr' '--with-gnu-ld' '--with-maxminddb' '--with-atf=no' '--enable-ipv6' '--enable-rrl' '--enable-filter-aaaa' '--disable-native-pkcs11' '--disable-isc-spnego' 'build_alias=x86_64-linux-gnu' 'CFLAGS=-g -O2 -fdebug-prefix-map=/build/bind9-QF7jf9/bind9-9.16.1=. -fstack-protector-strong -Wformat -Werror=format-security -fno-strict-aliasing -fno-delete-null-pointer-checks -DNO_VERSION_DATE -DDIG_SIGCHASE' 'LDFLAGS=-Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2'
+20-Jul-2021 15:29:45.220 running as: named -c /etc/bind/named.conf -g -u bind
+20-Jul-2021 15:29:45.220 compiled by GCC 9.3.0
+20-Jul-2021 15:29:45.220 compiled with OpenSSL version: OpenSSL 1.1.1f  31 Mar 2020
+20-Jul-2021 15:29:45.220 linked to OpenSSL version: OpenSSL 1.1.1f  31 Mar 2020
+20-Jul-2021 15:29:45.220 compiled with libxml2 version: 2.9.10
+20-Jul-2021 15:29:45.220 linked to libxml2 version: 20910
+20-Jul-2021 15:29:45.220 compiled with json-c version: 0.13.1
+20-Jul-2021 15:29:45.220 linked to json-c version: 0.13.1
+20-Jul-2021 15:29:45.220 compiled with zlib version: 1.2.11
+20-Jul-2021 15:29:45.220 linked to zlib version: 1.2.11
+20-Jul-2021 15:29:45.220 ----------------------------------------------------
+20-Jul-2021 15:29:45.220 BIND 9 is maintained by Internet Systems Consortium,
+20-Jul-2021 15:29:45.220 Inc. (ISC), a non-profit 501(c)(3) public-benefit 
+20-Jul-2021 15:29:45.220 corporation.  Support and training for BIND 9 are 
+20-Jul-2021 15:29:45.220 available at https://www.isc.org/support
+20-Jul-2021 15:29:45.220 ----------------------------------------------------
+20-Jul-2021 15:29:45.220 found 14 CPUs, using 14 worker threads
+20-Jul-2021 15:29:45.220 using 14 UDP listeners per interface
+20-Jul-2021 15:29:45.240 using up to 21000 sockets
+20-Jul-2021 15:29:45.256 loading configuration from '/etc/bind/named.conf'
+20-Jul-2021 15:29:45.256 reading built-in trust anchors from file '/etc/bind/bind.keys'
+20-Jul-2021 15:29:45.260 looking for GeoIP2 databases in '/usr/share/GeoIP'
+20-Jul-2021 15:29:45.260 using default UDP/IPv4 port range: [32768, 60999]
+20-Jul-2021 15:29:45.260 using default UDP/IPv6 port range: [32768, 60999]
+20-Jul-2021 15:29:45.260 listening on IPv4 interface lo, 127.0.0.1#53
+20-Jul-2021 15:29:45.276 listening on IPv4 interface eth0, 172.22.0.15#53
+20-Jul-2021 15:29:45.276 couldn't mkdir '//run/named': Permission denied
+20-Jul-2021 15:29:45.276 generating session key for dynamic DNS
+20-Jul-2021 15:29:45.276 couldn't mkdir '//run/named': Permission denied
+20-Jul-2021 15:29:45.276 could not create //run/named/session.key
+20-Jul-2021 15:29:45.276 failed to generate session key for dynamic DNS: permission denied
+20-Jul-2021 15:29:45.276 sizing zone task pool based on 2 zones
+20-Jul-2021 15:29:45.276 none:100: 'max-cache-size 90%' - setting to 3540MB (out of 3933MB)
+20-Jul-2021 15:29:45.284 set up managed keys zone for view _default, file 'managed-keys.bind'
+20-Jul-2021 15:29:45.284 automatic empty zone: 10.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 16.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 17.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 18.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 19.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 20.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 21.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 22.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 23.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 24.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 25.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 26.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 27.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 28.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 29.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 30.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 31.172.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 168.192.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 64.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 65.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 66.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 67.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 68.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 69.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 70.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 71.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 72.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 73.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 74.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 75.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 76.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 77.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 78.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 79.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 80.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 81.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 82.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 83.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 84.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 85.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 86.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 87.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 88.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 89.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 90.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 91.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 92.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 93.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 94.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 95.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 96.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 97.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 98.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 99.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 100.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 101.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 102.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 103.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 104.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 105.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 106.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 107.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 108.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 109.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 110.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 111.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 112.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 113.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 114.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 115.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 116.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 117.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 118.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 119.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 120.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 121.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 122.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 123.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 124.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 125.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 126.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 127.100.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 0.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 127.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 254.169.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 2.0.192.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 100.51.198.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 113.0.203.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 255.255.255.255.IN-ADDR.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.IP6.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.IP6.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: D.F.IP6.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 8.E.F.IP6.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 9.E.F.IP6.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: A.E.F.IP6.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: B.E.F.IP6.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: 8.B.D.0.1.0.0.2.IP6.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: EMPTY.AS112.ARPA
+20-Jul-2021 15:29:45.284 automatic empty zone: HOME.ARPA
+20-Jul-2021 15:29:45.284 none:100: 'max-cache-size 90%' - setting to 3540MB (out of 3933MB)
+20-Jul-2021 15:29:45.292 configuring command channel from '/etc/bind/rndc.key'
+20-Jul-2021 15:29:45.292 command channel listening on 127.0.0.1#953
+20-Jul-2021 15:29:45.292 configuring command channel from '/etc/bind/rndc.key'
+20-Jul-2021 15:29:45.292 couldn't add command channel ::1#953: address not available
+20-Jul-2021 15:29:45.292 not using config file logging statement for logging due to -g option
+20-Jul-2021 15:29:45.308 managed-keys-zone: loaded serial 0
+20-Jul-2021 15:29:45.312 zone ims.mnc001.mcc001.3gppnetwork.org/IN: loaded serial 1
+20-Jul-2021 15:29:45.312 zone epc.mnc001.mcc001.3gppnetwork.org/IN: loaded serial 1
+20-Jul-2021 15:29:45.312 all zones loaded
+20-Jul-2021 15:29:45.312 running
+20-Jul-2021 15:29:45.312 zone ims.mnc001.mcc001.3gppnetwork.org/IN: sending notifies (serial 1)
+20-Jul-2021 15:29:45.312 zone epc.mnc001.mcc001.3gppnetwork.org/IN: sending notifies (serial 1)
++ RUNTIME=rtpengine
++ lsmod
++ grep xt_RTPENGINE
++ modprobe xt_RTPENGINE
+modprobe: FATAL: Module xt_RTPENGINE not found in directory /lib/modules/5.4.70-050470-generic
++ modprobe xt_RTPENGINE
+modprobe: FATAL: Module xt_RTPENGINE not found in directory /lib/modules/5.4.70-050470-generic
++ '[' -z 172.22.0.16 ']'
++ '[' -z 0 ']'
++ '[' -z 172.22.0.16:2223 ']'
++ '[' -z 49000 ']'
++ '[' -z 50000 ']'
++ '[' -z 184 ']'
++ '[' -z /run/ngcp-rtpengine-daemon.pid ']'
+++ awk 'END{print $1}' /etc/hosts
++ LISTEN_CLI=172.22.0.16:9901
++ OPTIONS=
++ OPTIONS=' --interface=172.22.0.16 --listen-ng=172.22.0.16:2223 --listen-cli=172.22.0.16:9901 --pidfile=/run/ngcp-rtpengine-daemon.pid --port-min=49000 --port-max=50000 '
++ OPTIONS=' --interface=172.22.0.16 --listen-ng=172.22.0.16:2223 --listen-cli=172.22.0.16:9901 --pidfile=/run/ngcp-rtpengine-daemon.pid --port-min=49000 --port-max=50000  --table=0  --tos=184 --foreground'
++ test no = yes
++ set +e
++ '[' -e /proc/rtpengine/control ']'
++ iptables -N rtpengine
++ iptables -D INPUT -j rtpengine
++ iptables -I INPUT -j rtpengine
++ iptables -D rtpengine -p udp -j RTPENGINE --id 0
++ iptables -I rtpengine -p udp -j RTPENGINE --id 0
+iptables v1.8.4 (legacy): unknown option "--id"
+Try `iptables -h' or 'iptables --help' for more information.
++ iptables-save
++ ip6tables -N rtpengine
++ ip6tables -D INPUT -j rtpengine
++ ip6tables -I INPUT -j rtpengine
+modprobe: FATAL: Module ip6_tables not found in directory /lib/modules/5.4.70-050470-generic
+ip6tables v1.8.4 (legacy): can't initialize ip6tables table `filter': Table does not exist (do you need to insmod?)
+Perhaps ip6tables or your kernel needs to be upgraded.
++ ip6tables -D rtpengine -p udp -j RTPENGINE --id 0
++ ip6tables -I rtpengine -p udp -j RTPENGINE --id 0
+modprobe: FATAL: Module ip6_tables not found in directory /lib/modules/5.4.70-050470-generic
+ip6tables v1.8.4 (legacy): can't initialize ip6tables table `filter': Table does not exist (do you need to insmod?)
+Perhaps ip6tables or your kernel needs to be upgraded.
++ ip6tables-save
++ ip r add 192.168.101.0/24 via 172.22.0.8
++ set -x
++ exec rtpengine --interface=172.22.0.16 --listen-ng=172.22.0.16:2223 --listen-cli=172.22.0.16:9901 --pidfile=/run/ngcp-rtpengine-daemon.pid --port-min=49000 --port-max=50000 --table=0 --tos=184 --foreground
+[1626794986.509433] ERR: [core] FAILED TO CREATE KERNEL TABLE 0 (No such file or directory), KERNEL FORWARDING DISABLED
+Waiting for MySQL to start.
+ * Stopping MySQL database server mysqld
+   ...done.
+ * Starting MySQL database server mysqld
+changing: DiameterPeerHSS.xml c3p0.properties hibernate.properties hss.properties log4j.properties 
+changing: hss_db.sql hss_db_migrate_as_register.sql hss_db_migrate_dsai.sql userdata.sql 
+changing: DiameterPeerHSS.xml c3p0.properties hibernate.properties hss.properties log4j.properties 
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:49.195[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:49.195[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:49.219[0m: [[33mdbi[0m] [1;32mINFO[0m: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+[32m07/20 15:29:49.244[0m: [[33mapp[0m] [1;32mINFO[0m: HSS initialize...done (../src/hss/app-init.c:31)
+[32m07/20 15:29:49.246[0m: [[33mdiam[0m] [1;32mINFO[0m: CONNECTED TO 'hss.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#8): (../lib/diameter/common/logger.c:108)
+[32m07/20 15:29:49.246[0m: [[33mdiam[0m] [1;32mINFO[0m: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+Deploying component: 'icscf-1'
+Deploying component: 'scscf-1'
+   ...done.
+Deploying component: 'pcscf-1'
+sh: 1: cannot create /proc/sys/net/ipv4/ip_nonlocal_bind: Read-only file system
+sh: 1: cannot create /proc/sys/net/ipv6/ip_nonlocal_bind: Read-only file system
+Open5GS daemon v2.3.1-2-g65e96dd
+
+[32m07/20 15:29:54.244[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/open5gs/install/etc/open5gs/pcrf.yaml' (../lib/app/ogs-init.c:129)
+[32m07/20 15:29:54.244[0m: [[33mapp[0m] [1;32mINFO[0m: File Logging: '/open5gs/install/var/log/open5gs/pcrf.log' (../lib/app/ogs-init.c:132)
+[32m07/20 15:29:54.246[0m: [[33mdbi[0m] [1;32mINFO[0m: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+[32m07/20 15:29:54.278[0m: [[33mapp[0m] [1;32mINFO[0m: PCRF initialize...done (../src/pcrf/app-init.c:31)
+[32m07/20 15:29:54.280[0m: [[33mdiam[0m] [1;32mINFO[0m: CONNECTED TO 'pcrf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#9): (../lib/diameter/common/logger.c:108)
+[32m07/20 15:29:54.280[0m: [[33mdiam[0m] [1;32mINFO[0m: CONNECTED TO 'smf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+2021-07-20T15:29:55.631595Z mysqld_safe Logging to '/var/log/mysql/error.log'.
+2021-07-20T15:29:55.642442Z mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+mysqld is alive
+mysqld is alive
+mysqld is alive
+[0;36;49m 0(43) INFO: <core> [core/sctp_core.c:74]: sctp_core_check_support(): SCTP API not enabled - if you want to use it, load sctp module
+[0;39;49m[0;36;49m 0(43) INFO: <core> [core/tcp_main.c:5042]: init_tcp(): using epoll_lt as the io watch method (auto detected)
+[0;39;49mloading modules under config path: /usr/lib64/kamailio/modules_k/:/usr/lib64/kamailio/modules/:/usr/lib/kamailio/modules_k/:/usr/lib/kamailio/modules/:/usr/lib/x86_64-linux-gnu/kamailio/modules/:/usr/local/lib64/kamailio/modules
+Listening on 
+             udp: 172.22.0.20 [172.22.0.20]:6060
+             tcp: 172.22.0.20 [172.22.0.20]:6060
+Aliases: 
+             *: scscf.ims.mnc001.mcc001.3gppnetwork.org:*
+
+[0;36;49m 0(43) INFO: rr [../outbound/api.h:52]: ob_load_api(): unable to import bind_ob - maybe module is not loaded
+[0;39;49m[0;36;49m 0(43) INFO: rr [rr_mod.c:177]: mod_init(): outbound module not available
+[0;39;49m[0;36;49m 0(43) INFO: pike [pike.c:97]: pike_init(): PIKE - initializing
+[0;39;49m[0;36;49m 0(43) INFO: pike [ip_tree.c:81]: init_lock_set(): probing 256 set size
+[0;39;49m[0;36;49m 0(43) INFO: ims_usrloc_scscf [hslot.c:69]: ul_init_locks(): locks array size 512
+[0;39;49m[0;36;49m 0(43) INFO: ims_usrloc_scscf [contact_hslot.c:67]: init_contacts_locks(): locks array size 512
+[0;39;49m[0;36;49m 0(43) INFO: ims_usrloc_scscf [hslot_sp.c:70]: subs_init_locks(): locks array size 512
+[0;39;49m[0;36;49m 0(43) INFO: <core> [main.c:2779]: main(): processes (at least): 39 - shm size: 67108864 - pkg size: 8388608
+[0;39;49m[0;36;49m 0(43) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(43) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(43) INFO: cdp [cdp_mod.c:240]: cdp_child_init(): CDiameterPeer child starting ...
+[0;39;49m[0;39;49m[0;39;49m[0;39;49m 1(44) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1] 
+[0;39;49m 3(46) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [3] 
+[0;39;49m 6(49) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [-1] 
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [-1] 
+[0;39;49m[0;39;49m 2(45) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [2] 
+[0;39;49m[0;39;49m 4(47) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [4] 
+[0;39;49m[0;39;49m 8(51) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [-2] 
+[0;39;49m[0;39;49m10(53) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1002] 
+[0;39;49m[0;36;49m 0(43) INFO: cdp [cdp_mod.c:242]: cdp_child_init(): ... CDiameterPeer child started
+[0;39;49m[0;39;49m 0(43) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [0] 
+[0;39;49m[0;39;49m 7(50) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [-1] 
+[0;39;49m[0;39;49m11(54) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1003] 
+[0;39;49m[0;39;49m 9(52) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1001] 
+[0;39;49m[0;39;49m14(57) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1006] 
+[0;39;49m[0;39;49m13(56) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1005] 
+[0;39;49m[0;39;49m12(55) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1004] 
+[0;39;49m[0;36;49m11(54) INFO: cdp [worker.c:332]: worker_process(): [2] Worker process started...
+[0;39;49m[0;36;49m13(56) INFO: cdp [worker.c:332]: worker_process(): [4] Worker process started...
+[0;39;49m[0;36;49m 9(52) INFO: cdp [worker.c:332]: worker_process(): [0] Worker process started...
+[0;39;49m[0;36;49m10(53) INFO: cdp [worker.c:332]: worker_process(): [1] Worker process started...
+[0;39;49m[0;36;49m 8(51) INFO: ctl [io_listener.c:213]: io_listen_loop(): io_listen_loop:  using epoll_lt io watch method (config)
+[0;39;49m[0;36;49m14(57) INFO: cdp [worker.c:332]: worker_process(): [5] Worker process started...
+[0;39;49m[0;36;49m12(55) INFO: cdp [worker.c:332]: worker_process(): [3] Worker process started...
+[0;39;49m[0;39;49m38(81) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [-4] 
+[0;39;49m[0;39;49m[0;39;49m17(60) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1009] 
+[0;39;49m[0;39;49m15(58) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1007] 
+[0;39;49m[0;39;49m16(59) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1008] 
+22(65) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1014] 
+[0;39;49m[0;39;49m[0;39;49m27(70) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1000] 
+[0;39;49m[0;39;49m19(62) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1011] 
+[0;39;49m[0;36;49m22(65) INFO: cdp [worker.c:332]: worker_process(): [13] Worker process started...
+[0;39;49m[0;36;49m27(70) INFO: cdp [acceptor.c:81]: acceptor_process(): Acceptor process starting up...
+[0;39;49m[0;35;49m27(70) WARNING: cdp [tcp_accept.c:120]: create_socket(): create_socket(): Trying to open/bind/listen on 172.22.0.20 port 3870
+[0;39;49m[0;35;49m27(70) WARNING: cdp [tcp_accept.c:145]: create_socket(): create_socket(): Successful socket open/bind/listen on 172.22.0.20 port 3870
+[0;39;49m[0;36;49m27(70) INFO: cdp [acceptor.c:95]: acceptor_process(): Acceptor opened sockets. Entering accept loop ...
+[0;39;49m[0;36;49m17(60) INFO: cdp [worker.c:332]: worker_process(): [8] Worker process started...
+[0;39;49m[0;36;49m19(62) INFO: cdp [worker.c:332]: worker_process(): [10] Worker process started...
+[0;39;49m[0;39;49m29(72) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [127] 
+[0;39;49m[0;39;49m23(66) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1015] 
+[0;39;49m[0;39;49m33(76) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [-2] 
+[0;39;49m[0;39;49m25(68) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1002] 
+[0;39;49m[0;39;49m26(69) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1000] 
+[0;39;49m[0;36;49m25(68) INFO: cdp [receiver.c:454]: receiver_process(): receiver_process(): [] Receiver process doing init on new process...
+[0;39;49m[0;36;49m25(68) INFO: cdp [receiver.c:459]: receiver_process(): receiver_process(): [] Receiver process starting up...
+[0;39;49m[0;39;49m20(63) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1012] 
+[0;39;49m[0;36;49m26(69) INFO: cdp [receiver.c:454]: receiver_process(): receiver_process(): [hss.ims.mnc001.mcc001.3gppnetwork.org] Receiver process doing init on new process...
+[0;39;49m[0;36;49m16(59) INFO: cdp [worker.c:332]: worker_process(): [7] Worker process started...
+[0;39;49m[0;36;49m23(66) INFO: cdp [worker.c:332]: worker_process(): [14] Worker process started...
+[0;39;49m[0;39;49m28(71) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1001] 
+[0;39;49m[0;39;49m29(72) DEBUG: ims_registrar_scscf [registrar_notify.c:2269]: notification_event_process(): Running notification_event_process
+[0;39;49m[0;36;49m[0;36;49m20(63) INFO: cdp [worker.c:332]: worker_process(): [11] Worker process started...
+[0;39;49m15(58) INFO: cdp [worker.c:332]: worker_process(): [6] Worker process started...
+[0;39;49m[0;39;49m24(67) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1016] 
+[0;39;49m[0;36;49m28(71) INFO: cdp [timer.c:205]: timer_process(): Timer process starting up...
+[0;39;49m[0;39;49m18(61) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1010] 
+[0;39;49m[0;36;49m26(69) INFO: cdp [receiver.c:186]: add_serviced_peer(): add_serviced_peer(): Adding serviced_peer_t to receiver for peer [hss.ims.mnc001.mcc001.3gppnetwork.org]
+[0;39;49m[0;36;49m24(67) INFO: cdp [worker.c:332]: worker_process(): [15] Worker process started...
+[0;39;49m[0;39;49m34(77) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [-2] 
+[0;39;49m[0;36;49m18(61) INFO: cdp [worker.c:332]: worker_process(): [9] Worker process started...
+[0;39;49m[0;39;49m32(75) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [127] 
+[0;39;49m[0;39;49m36(79) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [6] 
+[0;39;49m[0;39;49m37(80) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [7] 
+[0;39;49m[0;39;49m35(78) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [5] 
+[0;39;49m[0;36;49m26(69) INFO: cdp [receiver.c:459]: receiver_process(): receiver_process(): [hss.ims.mnc001.mcc001.3gppnetwork.org] Receiver process starting up...
+[0;39;49m[0;36;49m[0;39;49m34(77) INFO: jsonrpcs [jsonrpcs_sock.c:443]: jsonrpc_dgram_process(): a new child 0/77
+32(75) DEBUG: ims_registrar_scscf [registrar_notify.c:2269]: notification_event_process(): Running notification_event_process
+[0;39;49m[0;39;49m[0;39;49m30(73) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [127] 
+[0;39;49m[0;39;49m30(73) DEBUG: ims_registrar_scscf [registrar_notify.c:2269]: notification_event_process(): Running notification_event_process
+[0;39;49m[0;39;49m21(64) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [1013] 
+[0;39;49m[0;39;49m31(74) DEBUG: ims_registrar_scscf [ims_registrar_scscf_mod.c:528]: child_init(): Initialization of module in child [127] 
+[0;39;49m[0;36;49m21(64) INFO: cdp [worker.c:332]: worker_process(): [12] Worker process started...
+[0;39;49m[0;39;49m31(74) DEBUG: ims_registrar_scscf [registrar_notify.c:2269]: notification_event_process(): Running notification_event_process
+[0;39;49m[0;36;49m28(71) INFO: cdp [peerstatemachine.c:526]: I_Snd_Conn_Req(): I_Snd_Conn_Req(): Peer hss.ims.mnc001.mcc001.3gppnetwork.org 
+[0;39;49m[0;36;49m28(71) INFO: cdp [receiver.c:874]: peer_connect(): peer_connect(): Trying to connect to 172.22.0.18 port 3868
+[0;39;49m[0;31;49m28(71) ERROR: cdp [receiver.c:922]: peer_connect(): peer_connect(): Error opening connection to to 172.22.0.18 port 3868 >Connection refused
+[0;39;49m199bce95c319c0badf6adcbcec4226db32c221592cd8a6b151953c72e8c558cd
+[32m07/20 15:30:06.209[0m: [[33mamf[0m] [1;32mINFO[0m: gNB-N2 accepted[172.22.0.23]:51127 in ng-path module (../src/amf/ngap-sctp.c:105)
+[32m07/20 15:30:06.209[0m: [[33mamf[0m] [1;32mINFO[0m: gNB-N2 accepted[172.22.0.23] in master_sm module (../src/amf/amf-sm.c:606)
+[32m07/20 15:30:06.209[0m: [[33mamf[0m] [1;32mINFO[0m: [GNB] max_num_of_ostreams : 30 (../src/amf/context.c:854)
+[32m07/20 15:30:06.209[0m: [[33mamf[0m] [1;32mINFO[0m: [Added] Number of gNBs is now 1 (../src/amf/context.c:869)
+220f93ba81e4e0cf1cec155bc1329a5374d686634b5950d56bbf3f004505ed30
+[32m07/20 15:30:07.198[0m: [[33mamf[0m] [1;32mINFO[0m: InitialUEMessage (../src/amf/ngap-handler.c:361)
+[32m07/20 15:30:07.198[0m: [[33mamf[0m] [1;32mINFO[0m: [Added] Number of gNB-UEs is now 1 (../src/amf/context.c:2005)
+[32m07/20 15:30:07.198[0m: [[33mamf[0m] [1;32mINFO[0m:     RAN_UE_NGAP_ID[1] AMF_UE_NGAP_ID[1] TAC[1] CellID[0x10] (../src/amf/ngap-handler.c:497)
+[32m07/20 15:30:07.198[0m: [[33mamf[0m] [1;32mINFO[0m: [suci-0-001-01-0000-0-0-1234567895] Unknown UE by SUCI (../src/amf/context.c:1385)
+[32m07/20 15:30:07.199[0m: [[33mamf[0m] [1;32mINFO[0m: [Added] Number of AMF-UEs is now 1 (../src/amf/context.c:1187)
+[32m07/20 15:30:07.199[0m: [[33mgmm[0m] [1;32mINFO[0m: Registration request (../src/amf/gmm-sm.c:130)
+[32m07/20 15:30:07.199[0m: [[33mgmm[0m] [1;32mINFO[0m: [suci-0-001-01-0000-0-0-1234567895]    SUCI (../src/amf/gmm-handler.c:156)
+[32m07/20 15:30:07.199[0m: [[33mapp[0m] [1;36mWARNING[0m: Try to discover [AUSF] (../lib/sbi/path.c:110)
+[32m07/20 15:30:07.201[0m: [[33mamf[0m] [1;32mINFO[0m: [457aa932-e96f-41eb-8a87-7f52eae63df2] (NF-discover) NF registered (../src/amf/nnrf-handler.c:345)
+[32m07/20 15:30:07.201[0m: [[33mamf[0m] [1;32mINFO[0m: [457aa932-e96f-41eb-8a87-7f52eae63df2] (NF-discover) NF Profile updated (../src/amf/nnrf-handler.c:404)
+[32m07/20 15:30:07.202[0m: [[33mapp[0m] [1;36mWARNING[0m: Try to discover [UDM] (../lib/sbi/path.c:110)
+[32m07/20 15:30:07.202[0m: [[33mausf[0m] [1;32mINFO[0m: [4872c2a0-e96f-41eb-a148-b303d43bb8c0] (NF-discover) NF registered (../src/ausf/nnrf-handler.c:287)
+[32m07/20 15:30:07.203[0m: [[33mausf[0m] [1;32mINFO[0m: [4872c2a0-e96f-41eb-a148-b303d43bb8c0] (NF-discover) NF Profile updated (../src/ausf/nnrf-handler.c:332)
+[32m07/20 15:30:07.214[0m: [[33mapp[0m] [1;36mWARNING[0m: Try to discover [UDM] (../lib/sbi/path.c:110)
+[32m07/20 15:30:07.215[0m: [[33mamf[0m] [1;32mINFO[0m: [4872c2a0-e96f-41eb-a148-b303d43bb8c0] (NF-discover) NF registered (../src/amf/nnrf-handler.c:345)
+[32m07/20 15:30:07.215[0m: [[33mamf[0m] [1;32mINFO[0m: [4872c2a0-e96f-41eb-a148-b303d43bb8c0] (NF-discover) NF Profile updated (../src/amf/nnrf-handler.c:404)
+[32m07/20 15:30:07.221[0m: [[33mapp[0m] [1;36mWARNING[0m: Try to discover [UDR] (../lib/sbi/path.c:110)
+[32m07/20 15:30:07.222[0m: [[33mpcf[0m] [1;32mINFO[0m: [4dd1bd46-e96f-41eb-a6c3-8fa54df752cf] (NF-discover) NF registered (../src/pcf/nnrf-handler.c:290)
+[32m07/20 15:30:07.222[0m: [[33mpcf[0m] [1;32mINFO[0m: [4dd1bd46-e96f-41eb-a6c3-8fa54df752cf] (NF-discover) NF Profile updated (../src/pcf/nnrf-handler.c:349)
+[32m07/20 15:30:07.425[0m: [[33mgmm[0m] [1;32mINFO[0m: [imsi-001011234567895] Registration complete (../src/amf/gmm-sm.c:1007)
+[32m07/20 15:30:07.425[0m: [[33mamf[0m] [1;32mINFO[0m: [imsi-001011234567895] Configuration update command (../src/amf/nas-path.c:389)
+[32m07/20 15:30:07.425[0m: [[33mgmm[0m] [1;32mINFO[0m:     UTC [2021-07-20T15:30:07] Timezone[0]/DST[0] (../src/amf/gmm-build.c:502)
+[32m07/20 15:30:07.425[0m: [[33mgmm[0m] [1;32mINFO[0m:     LOCAL [2021-07-20T15:30:07] Timezone[0]/DST[0] (../src/amf/gmm-build.c:507)
+[32m07/20 15:30:07.425[0m: [[33mamf[0m] [1;32mINFO[0m: [Added] Number of AMF-Sessions is now 1 (../src/amf/context.c:2017)
+[32m07/20 15:30:07.425[0m: [[33mgmm[0m] [1;32mINFO[0m: UE SUPI[imsi-001011234567895] DNN[internet] S_NSSAI[SST:1 SD:0xffffff] (../src/amf/gmm-handler.c:1041)
+[32m07/20 15:30:07.425[0m: [[33mapp[0m] [1;36mWARNING[0m: Try to discover [NSSF] (../lib/sbi/path.c:110)
+[32m07/20 15:30:07.426[0m: [[33mamf[0m] [1;32mINFO[0m: [4a3f42b6-e96f-41eb-aaf7-67189c57bf5a] (NF-discover) NF registered (../src/amf/nnrf-handler.c:345)
+[32m07/20 15:30:07.427[0m: [[33mamf[0m] [1;32mINFO[0m: [4a3f42b6-e96f-41eb-aaf7-67189c57bf5a] (NF-discover) NF Profile updated (../src/amf/nnrf-handler.c:404)
+[32m07/20 15:30:07.428[0m: [[33mamf[0m] [1;32mINFO[0m: [4aee0ddc-e96f-41eb-b75b-ef7cd63f9d02] (NF-discover) NF registered (../src/amf/nnrf-handler.c:345)
+[32m07/20 15:30:07.428[0m: [[33mamf[0m] [1;32mINFO[0m: [4aee0ddc-e96f-41eb-b75b-ef7cd63f9d02] (NF-discover) NF Profile updated (../src/amf/nnrf-handler.c:404)
+[32m07/20 15:30:07.429[0m: [[33msmf[0m] [1;32mINFO[0m: [Added] Number of SMF-UEs is now 1 (../src/smf/context.c:792)
+[32m07/20 15:30:07.429[0m: [[33msmf[0m] [1;32mINFO[0m: [Added] Number of SMF-Sessions is now 1 (../src/smf/context.c:2469)
+[32m07/20 15:30:07.429[0m: [[33mapp[0m] [1;36mWARNING[0m: Try to discover [UDM] (../lib/sbi/path.c:110)
+[32m07/20 15:30:07.430[0m: [[33msmf[0m] [1;32mINFO[0m: [4872c2a0-e96f-41eb-a148-b303d43bb8c0] (NF-discover) NF registered (../src/smf/nnrf-handler.c:288)
+[32m07/20 15:30:07.430[0m: [[33msmf[0m] [1;32mINFO[0m: [4872c2a0-e96f-41eb-a148-b303d43bb8c0] (NF-discover) NF Profile updated (../src/smf/nnrf-handler.c:333)
+[32m07/20 15:30:07.436[0m: [[33msmf[0m] [1;32mINFO[0m: UE SUPI[imsi-001011234567895] DNN[internet] IPv4[192.168.100.2] IPv6[] (../src/smf/npcf-handler.c:415)
+[32m07/20 15:30:07.436[0m: [[33mupf[0m] [1;32mINFO[0m: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:160)
+[32m07/20 15:30:07.437[0m: [[33mgtp[0m] [1;32mINFO[0m: gtp_connect() [172.22.0.7]:2152 (../lib/gtp/path.c:58)
+[32m07/20 15:30:07.437[0m: [[33mupf[0m] [1;32mINFO[0m: UE F-SEID[CP:0x1 UP:0x1] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:336)
+[32m07/20 15:30:07.437[0m: [[33mgtp[0m] [1;32mINFO[0m: gtp_connect() [172.22.0.8]:2152 (../lib/gtp/path.c:58)
+[32m07/20 15:30:07.441[0m: [[33mgtp[0m] [1;32mINFO[0m: gtp_connect() [172.22.0.23]:2152 (../lib/gtp/path.c:58)
+ERROR 1064 (42000) at line 613: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'identified by 'hss'' at line 1
+Building Classpath
+Classpath is lib/xml-apis.jar:lib/xercesImpl.jar:lib/xerces-2.4.0.jar:lib/xalan-2.4.0.jar:lib/tomcat-util.jar:lib/tomcat-http.jar:lib/tomcat-coyote.jar:lib/struts.jar:lib/servlets-default.jar:lib/servlet-api.jar:lib/naming-resources.jar:lib/naming-factory.jar:lib/mysql-connector-java-5.1.49-bin.jar:lib/mx4j-3.0.1.jar:lib/log4j.jar:lib/junitee.jar:lib/junit.jar:lib/jta.jar:lib/jsp-api.jar:lib/jmx.jar:lib/jdp.jar:lib/jasper-runtime.jar:lib/jasper-compiler.jar:lib/jasper-compiler-jdt.jar:lib/hibernate3.jar:lib/ehcache-1.1.jar:lib/dom4j-1.6.1.jar:lib/commons-validator.jar:lib/commons-modeler.jar:lib/commons-logging.jar:lib/commons-logging-1.0.4.jar:lib/commons-lang.jar:lib/commons-fileupload.jar:lib/commons-el.jar:lib/commons-digester.jar:lib/commons-collections-3.1.jar:lib/commons-beanutils.jar:lib/cglib-2.1.3.jar:lib/catalina.jar:lib/catalina-optional.jar:lib/c3p0-0.9.1.jar:lib/base64.jar:lib/asm.jar:lib/asm-attrs.jar:lib/antlr-2.7.6.jar:lib/FHoSS.jar:/usr/lib/jvm/jdk1.7.0_80/jre/lib/:log4j.properties:..
+[0;36;49m 0(47) INFO: <core> [core/sctp_core.c:74]: sctp_core_check_support(): SCTP API not enabled - if you want to use it, load sctp module
+[0;39;49mloading modules under config path: /usr/lib64/kamailio/modules_k/:/usr/lib64/kamailio/modules/:/usr/lib/kamailio/modules_k/:/usr/lib/kamailio/modules/:/usr/lib/x86_64-linux-gnu/kamailio/modules/:/usr/local/lib64/kamailio/modules
+Listening on 
+             udp: 172.22.0.19 [172.22.0.19]:4060
+             tcp: 172.22.0.19 [172.22.0.19]:4060
+             tcp: 127.0.0.1 [127.0.0.1]:4060
+Aliases: 
+             *: ims.mnc001.mcc001.3gppnetwork.org:*
+
+[0;36;49m 0(47) INFO: <core> [core/tcp_main.c:5042]: init_tcp(): using epoll_lt as the io watch method (auto detected)
+[0;39;49m[0;36;49m 0(47) INFO: rr [../outbound/api.h:52]: ob_load_api(): unable to import bind_ob - maybe module is not loaded
+[0;39;49m[0;36;49m 0(47) INFO: rr [rr_mod.c:177]: mod_init(): outbound module not available
+[0;39;49m[0;36;49m 0(47) INFO: pike [pike.c:97]: pike_init(): PIKE - initializing
+[0;39;49m[0;36;49m 0(47) INFO: pike [ip_tree.c:81]: init_lock_set(): probing 256 set size
+[0;39;49m[0;36;49m 0(47) INFO: <core> [main.c:2779]: main(): processes (at least): 35 - shm size: 67108864 - pkg size: 8388608
+[0;39;49m[0;36;49m 0(47) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(47) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(47) INFO: cdp [cdp_mod.c:240]: cdp_child_init(): CDiameterPeer child starting ...
+[0;39;49m[0;36;49m 8(55) INFO: ctl [io_listener.c:213]: io_listen_loop(): io_listen_loop:  using epoll_lt io watch method (config)
+[0;39;49m[0;36;49m 9(56) INFO: cdp [worker.c:332]: worker_process(): [0] Worker process started...
+[0;39;49m[0;36;49m10(57) INFO: cdp [worker.c:332]: worker_process(): [1] Worker process started...
+[0;39;49m[0;36;49m11(58) INFO: cdp [worker.c:332]: worker_process(): [2] Worker process started...
+[0;39;49m[0;36;49m12(59) INFO: cdp [worker.c:332]: worker_process(): [3] Worker process started...
+[0;39;49m[0;36;49m13(60) INFO: cdp [worker.c:332]: worker_process(): [4] Worker process started...
+[0;39;49m[0;36;49m14(61) INFO: cdp [worker.c:332]: worker_process(): [5] Worker process started...
+[0;39;49m[0;36;49m15(62) INFO: cdp [worker.c:332]: worker_process(): [6] Worker process started...
+[0;39;49m[0;36;49m16(63) INFO: cdp [worker.c:332]: worker_process(): [7] Worker process started...
+[0;39;49m[0;36;49m17(64) INFO: cdp [worker.c:332]: worker_process(): [8] Worker process started...
+[0;39;49m[0;36;49m18(65) INFO: cdp [worker.c:332]: worker_process(): [9] Worker process started...
+[0;39;49m[0;36;49m19(66) INFO: cdp [worker.c:332]: worker_process(): [10] Worker process started...
+[0;39;49m[0;36;49m20(67) INFO: cdp [worker.c:332]: worker_process(): [11] Worker process started...
+[0;39;49m[0;36;49m21(68) INFO: cdp [worker.c:332]: worker_process(): [12] Worker process started...
+[0;39;49m[0;36;49m22(69) INFO: cdp [worker.c:332]: worker_process(): [13] Worker process started...
+[0;39;49m[0;36;49m23(70) INFO: cdp [worker.c:332]: worker_process(): [14] Worker process started...
+[0;39;49m[0;36;49m24(71) INFO: cdp [worker.c:332]: worker_process(): [15] Worker process started...
+[0;39;49m[0;36;49m25(72) INFO: cdp [receiver.c:454]: receiver_process(): receiver_process(): [] Receiver process doing init on new process...
+[0;39;49m[0;36;49m25(72) INFO: cdp [receiver.c:459]: receiver_process(): receiver_process(): [] Receiver process starting up...
+[0;39;49m[0;36;49m26(73) INFO: cdp [receiver.c:454]: receiver_process(): receiver_process(): [hss.ims.mnc001.mcc001.3gppnetwork.org] Receiver process doing init on new process...
+[0;39;49m[0;36;49m26(73) INFO: cdp [receiver.c:186]: add_serviced_peer(): add_serviced_peer(): Adding serviced_peer_t to receiver for peer [hss.ims.mnc001.mcc001.3gppnetwork.org]
+[0;39;49m[0;36;49m26(73) INFO: cdp [receiver.c:459]: receiver_process(): receiver_process(): [hss.ims.mnc001.mcc001.3gppnetwork.org] Receiver process starting up...
+[0;39;49m[0;36;49m27(74) INFO: cdp [acceptor.c:81]: acceptor_process(): Acceptor process starting up...
+[0;39;49m[0;36;49m 0(47) INFO: cdp [cdp_mod.c:242]: cdp_child_init(): ... CDiameterPeer child started
+[0;39;49m[0;35;49m27(74) WARNING: cdp [tcp_accept.c:120]: create_socket(): create_socket(): Trying to open/bind/listen on 172.22.0.19 port 3869
+[0;39;49m[0;35;49m27(74) WARNING: cdp [tcp_accept.c:145]: create_socket(): create_socket(): Successful socket open/bind/listen on 172.22.0.19 port 3869
+[0;39;49m[0;36;49m27(74) INFO: cdp [acceptor.c:95]: acceptor_process(): Acceptor opened sockets. Entering accept loop ...
+[0;39;49m[0;36;49m28(75) INFO: cdp [timer.c:205]: timer_process(): Timer process starting up...
+[0;39;49m[0;36;49m30(77) INFO: jsonrpcs [jsonrpcs_sock.c:443]: jsonrpc_dgram_process(): a new child 0/77
+[0;39;49m[main] INFO  de.fhg.fokus.hss.main.TomcatServer  - Tomcat-Server is started.
+[main] INFO  org.apache.catalina.startup.Embedded  - Starting tomcat server
+[main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/5.5.9
+[main] INFO  org.apache.coyote.http11.Http11Protocol  - Initializing Coyote HTTP/1.1 on http-172.22.0.18-8080
+[main] INFO  org.apache.coyote.http11.Http11Protocol  - Starting Coyote HTTP/1.1 on http-172.22.0.18-8080
+[main] WARN  org.apache.catalina.connector.MapperListener  - Unknown default host: 172.22.0.18
+[main] INFO  org.apache.catalina.core.StandardHost  - XML validation disabled
+[0;36;49m28(75) INFO: cdp [peerstatemachine.c:526]: I_Snd_Conn_Req(): I_Snd_Conn_Req(): Peer hss.ims.mnc001.mcc001.3gppnetwork.org 
+[0;39;49m[0;36;49m28(75) INFO: cdp [receiver.c:874]: peer_connect(): peer_connect(): Trying to connect to 172.22.0.18 port 3868
+[0;39;49m[0;31;49m28(75) ERROR: cdp [receiver.c:922]: peer_connect(): peer_connect(): Error opening connection to to 172.22.0.18 port 3868 >Connection refused
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1923]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1924]: print_all_dlgs(): printing 4096 dialogs
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1934]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:187]: reg_await_timer(): Looking for expired/useless at 85092709
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:232]: reg_await_timer(): [DONE] Looking for expired/useless at 85092709
+[0;39;49m[0;36;49m 0(50) INFO: pv [pv_shv.c:60]: shvar_init_locks(): locks array size 16
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/tcp_main.c:5042]: init_tcp(): using epoll_lt as the io watch method (auto detected)
+[0;39;49mloading modules under config path: /usr/lib64/kamailio/modules_k/:/usr/lib64/kamailio/modules/:/usr/lib/kamailio/modules_k/:/usr/lib/kamailio/modules/:/usr/lib/x86_64-linux-gnu/kamailio/modules/:/usr/local/lib64/kamailio/modules
+Listening on 
+             udp: 172.22.0.21 [172.22.0.21]:5060
+             tcp: 172.22.0.21 [172.22.0.21]:5060
+Aliases: 
+             *: pcscf.ims.mnc001.mcc001.3gppnetwork.org:*
+
+[0;35;49m 0(50) WARNING: <core> [core/daemonize.c:596]: mem_lock_pages(): failed to lock the memory pages (disable swap): Cannot allocate memory [12]
+[0;39;49m[0;36;49m 0(50) INFO: rr [../outbound/api.h:52]: ob_load_api(): unable to import bind_ob - maybe module is not loaded
+[0;39;49m[0;36;49m 0(50) INFO: rr [rr_mod.c:177]: mod_init(): outbound module not available
+[0;39;49m[0;36;49m 0(50) INFO: auth [auth_mod.c:345]: mod_init(): qop set, but nonce-count (nc_enabled) support disabled
+[0;39;49m[0;36;49m 0(50) INFO: path [../outbound/api.h:52]: ob_load_api(): unable to import bind_ob - maybe module is not loaded
+[0;39;49m[0;36;49m 0(50) INFO: path [path_mod.c:151]: mod_init(): outbound module not available
+[0;39;49m[0;36;49m 0(50) INFO: ims_usrloc_pcscf [hslot.c:62]: ul_init_locks(): locks array size 512
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:268]: mod_init(): Successfully bound to PCSCF Usrloc module
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:275]: mod_init(): Successfully bound to TM module
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:118]: ipsec_print_all_socket_lists(): Listening on:
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:5060
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:5100
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:6100
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:5101
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:6101
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:5102
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:6102
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:5103
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:6103
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:5104
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:6104
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:5105
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:6105
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:5106
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:6106
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:5107
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:6107
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:5108
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:6108
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:5109
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): udp: 172.22.0.21 [172.22.0.21]:6109
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:5060
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:5100
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:6100
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:5101
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:6101
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:5102
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:6102
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:5103
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:6103
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:5104
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:6104
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:5105
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:6105
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:5106
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:6106
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:5107
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:6107
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:5108
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:6108
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:5109
+[0;39;49m[0;36;49m 0(50) INFO: ims_ipsec_pcscf [ims_ipsec_pcscf_mod.c:168]: ipsec_print_all_socket_lists(): tcp: 172.22.0.21 [172.22.0.21]:6109
+[0;39;49m[0;36;49m 0(50) INFO: ims_registrar_pcscf [ims_registrar_pcscf_mod.c:275]: mod_init(): Successfully bound to PCSCF IPSEC module
+[0;39;49m[0;36;49m 0(50) INFO: <core> [main.c:2779]: main(): processes (at least): 111 - shm size: 67108864 - pkg size: 8388608
+[0;39;49m[0;35;49m 0(50) WARNING: tm [tm.c:507]: fixup_routes(): t_on_failure("NATMANAGE"): empty/non existing route
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:154]: probe_max_receive_buffer(): SO_RCVBUF is initially 212992
+[0;39;49m[0;36;49m 0(50) INFO: <core> [core/udp_server.c:206]: probe_max_receive_buffer(): SO_RCVBUF is finally 524288
+[0;39;49m[0;31;49m 0(50) ERROR: <script>: event_route[htable:mod-init] 
+[0;39;49m[0;36;49m 1(51) INFO: rtpengine [rtpengine.c:2750]: rtpp_test(): rtp proxy <udp:172.22.0.16:2223> found, support for it enabled
+[0;39;49m[0;36;49m 0(50) INFO: cdp [cdp_mod.c:240]: cdp_child_init(): CDiameterPeer child starting ...
+[0;39;49m[0;36;49m 0(50) INFO: cdp [cdp_mod.c:242]: cdp_child_init(): ... CDiameterPeer child started
+[0;39;49m[0;36;49m100(150) INFO: jsonrpcs [jsonrpcs_sock.c:443]: jsonrpc_dgram_process(): a new child 0/150
+[0;39;49m[0;36;49m92(142) INFO: cdp [worker.c:332]: worker_process(): [3] Worker process started...
+[0;39;49m[0;36;49m90(140) INFO: cdp [worker.c:332]: worker_process(): [1] Worker process started...
+[0;39;49m[0;36;49m89(139) INFO: cdp [worker.c:332]: worker_process(): [0] Worker process started...
+[0;39;49m[0;36;49m94(144) INFO: cdp [receiver.c:454]: receiver_process(): receiver_process(): [pcrf.epc.mnc001.mcc001.3gppnetwork.org] Receiver process doing init on new process...
+[0;39;49m[0;36;49m94(144) INFO: cdp [receiver.c:186]: add_serviced_peer(): add_serviced_peer(): Adding serviced_peer_t to receiver for peer [pcrf.epc.mnc001.mcc001.3gppnetwork.org]
+[0;39;49m[0;36;49m94(144) INFO: cdp [receiver.c:459]: receiver_process(): receiver_process(): [pcrf.epc.mnc001.mcc001.3gppnetwork.org] Receiver process starting up...
+[0;39;49m[0;36;49m91(141) INFO: cdp [worker.c:332]: worker_process(): [2] Worker process started...
+[0;39;49m[0;36;49m93(143) INFO: cdp [receiver.c:454]: receiver_process(): receiver_process(): [] Receiver process doing init on new process...
+[0;39;49m[0;36;49m93(143) INFO: cdp [receiver.c:459]: receiver_process(): receiver_process(): [] Receiver process starting up...
+[0;39;49m[0;36;49m96(146) INFO: cdp [timer.c:205]: timer_process(): Timer process starting up...
+[0;39;49m[0;36;49m95(145) INFO: cdp [acceptor.c:81]: acceptor_process(): Acceptor process starting up...
+[0;39;49m[0;35;49m95(145) WARNING: cdp [tcp_accept.c:120]: create_socket(): create_socket(): Trying to open/bind/listen on 172.22.0.21 port 3871
+[0;39;49m[0;35;49m95(145) WARNING: cdp [tcp_accept.c:145]: create_socket(): create_socket(): Successful socket open/bind/listen on 172.22.0.21 port 3871
+[0;39;49m[0;36;49m95(145) INFO: cdp [acceptor.c:95]: acceptor_process(): Acceptor opened sockets. Entering accept loop ...
+[0;39;49m[0;36;49m88(138) INFO: ctl [io_listener.c:213]: io_listen_loop(): io_listen_loop:  using epoll_lt io watch method (config)
+[0;39;49m[0;36;49m96(146) INFO: cdp [peerstatemachine.c:526]: I_Snd_Conn_Req(): I_Snd_Conn_Req(): Peer pcrf.epc.mnc001.mcc001.3gppnetwork.org 
+[0;39;49m[0;36;49m96(146) INFO: cdp [receiver.c:874]: peer_connect(): peer_connect(): Trying to connect to 172.22.0.4 port 3868
+[0;39;49m[0;36;49m96(146) INFO: cdp [receiver.c:954]: peer_connect(): peer_connect(): Peer pcrf.epc.mnc001.mcc001.3gppnetwork.org:3868 connected
+[0;39;49m[32m07/20 15:30:13.683[0m: [[33mdiam[0m] [1;32mINFO[0m: CONNECTED TO 'pcscf.ims.mnc001.mcc001.3gppnetwork.org' (TCP,soc#11): (../lib/diameter/common/logger.c:108)
+[main] INFO  de.fhg.fokus.hss.web.servlet.ResponseFilter  - Response Filter Initialisation!
+log4j:WARN No appenders could be found for logger (org.apache.catalina.loader.WebappClassLoader).
+log4j:WARN Please initialize the log4j system properly.
+[main] INFO  org.apache.struts.tiles.TilesPlugin  - Tiles definition factory loaded for module ''.
+[main] INFO  org.apache.struts.validator.ValidatorPlugIn  - Loading validation rules file from '/WEB-INF/validator-rules.xml'
+[main] INFO  org.apache.struts.validator.ValidatorPlugIn  - Loading validation rules file from '/WEB-INF/validation.xml'
+[main] INFO  de.fhg.fokus.hss.main.TomcatServer  - WebConsole of FHoSS was started !
+[main] INFO  org.hibernate.cfg.Environment  - Hibernate 3.2.1
+[main] INFO  org.hibernate.cfg.Environment  - loaded properties from resource hibernate.properties: {hibernate.c3p0.timeout=3600, hibernate.connection.driver_class=com.mysql.jdbc.Driver, hibernate.connection.isolation=1, hibernate.c3p0.max_statements=0, hibernate.c3p0.max_size=30, hibernate.dialect=org.hibernate.dialect.MySQLDialect, hibernate.c3p0.idle_test_period=1200, hibernate.c3p0.min_size=1, hibernate.connection.username=hss, hibernate.c3p0.acquire_increment=1, hibernate.connection.url=jdbc:mysql://172.22.0.17:3306/hss_db, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.password=****}
+[main] INFO  org.hibernate.cfg.Environment  - Bytecode provider name : cglib
+[main] INFO  org.hibernate.cfg.Environment  - using JDK 1.4 java.sql.Timestamp handling
+[main] INFO  org.hibernate.cfg.Configuration  - configuring from resource: /hibernate.cfg.xml
+[main] INFO  org.hibernate.cfg.Configuration  - Configuration resource: /hibernate.cfg.xml
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/ApplicationServer.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.ApplicationServer -> application_server
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/CapabilitiesSet.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.CapabilitiesSet -> capabilities_set
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/Capability.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.Capability -> capability
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/ChargingInfo.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.ChargingInfo -> charging_info
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/DSAI_IMPU.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.DSAI_IMPU -> dsai_impu
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/DSAI_IFC.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.DSAI_IFC -> dsai_ifc
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/DSAI.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.DSAI -> dsai
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/IFC.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.IFC -> ifc
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/IMPI_IMPU.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.IMPI_IMPU -> impi_impu
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/IMPI.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.IMPI -> impi
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/IMPU.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.IMPU -> impu
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/IMPU_VisitedNetwork.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.IMPU_VisitedNetwork -> impu_visited_network
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/IMSU.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.IMSU -> imsu
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/Preferred_SCSCF_Set.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.Preferred_SCSCF_Set -> preferred_scscf_set
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/CxEvents.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.CxEvents -> cx_events
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/Shared_IFC_Set.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.Shared_IFC_Set -> shared_ifc_set
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/ShNotification.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.ShNotification -> sh_notification
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/ShSubscription.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.ShSubscription -> sh_subscription
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/SP_IFC.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.SP_IFC -> sp_ifc
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/SP_Shared_IFC_Set.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.SP_Shared_IFC_Set -> sp_shared_ifc_set
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/SP.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.SP -> sp
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/SPT.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.SPT -> spt
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/TP.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.TP -> tp
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/VisitedNetwork.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.VisitedNetwork -> visited_network
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/RepositoryData.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.RepositoryData -> repository_data
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/AliasesRepositoryData.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.AliasesRepositoryData -> aliases_repository_data
+[main] INFO  org.hibernate.cfg.Configuration  - Reading mappings from resource : mappings/Zh_USS.hbm.xml
+[main] INFO  org.hibernate.cfg.HbmBinder  - Mapping class: de.fhg.fokus.hss.db.model.Zh_USS -> zh_uss
+[main] INFO  org.hibernate.cfg.Configuration  - Configured SessionFactory: foo
+[main] INFO  org.hibernate.connection.C3P0ConnectionProvider  - C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://172.22.0.17:3306/hss_db
+[main] INFO  org.hibernate.connection.C3P0ConnectionProvider  - Connection properties: {user=hss, password=****, autocommit=false}
+[main] INFO  org.hibernate.connection.C3P0ConnectionProvider  - autocommit mode: false
+[main] INFO  com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+[main] INFO  com.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+[main] INFO  org.hibernate.connection.C3P0ConnectionProvider  - JDBC isolation level: READ_UNCOMMITTED
+[main] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@f8f1b711 [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@596e8c91 [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1bqx2c2ai1ij69gd1q70zqc|6a23cda8, idleConnectionTestPeriod -> 1200, initialPoolSize -> 1, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@d697e7c7 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1bqx2c2ai1ij69gd1q70zqc|633b3b2e, jdbcUrl -> jdbc:mysql://172.22.0.17:3306/hss_db, properties -> {user=******, password=******, autocommit=false} ], preferredTestQuery -> null, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1bqx2c2ai1ij69gd1q70zqc|6fde6191, numHelperThreads -> 3 ]
+Tue Jul 20 15:30:16 UTC 2021 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jul 20 15:30:16 UTC 2021 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+[main] INFO  org.hibernate.cfg.SettingsFactory  - RDBMS: MySQL, version: 8.0.25-0ubuntu0.20.04.1
+[main] INFO  org.hibernate.cfg.SettingsFactory  - JDBC driver: MySQL Connector Java, version: mysql-connector-java-5.1.49 ( Revision: ad86f36e100e104cd926c6b81c8cab9565750116 )
+[main] INFO  org.hibernate.dialect.Dialect  - Using dialect: org.hibernate.dialect.MySQLDialect
+[main] INFO  org.hibernate.transaction.TransactionFactoryFactory  - Using default transaction strategy (direct JDBC transactions)
+[main] INFO  org.hibernate.transaction.TransactionManagerLookupFactory  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Automatic flush during beforeCompletion(): disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Automatic session close at end of transaction: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - JDBC batch size: 15
+[main] INFO  org.hibernate.cfg.SettingsFactory  - JDBC batch updates for versioned data: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Scrollable result sets: enabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - JDBC3 getGeneratedKeys(): enabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Connection release mode: auto
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Maximum outer join fetch depth: 2
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Default batch fetch size: 1
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Generate SQL with comments: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Order SQL updates by primary key: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[main] INFO  org.hibernate.hql.ast.ASTQueryTranslatorFactory  - Using ASTQueryTranslatorFactory
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Query language substitutions: {}
+[main] INFO  org.hibernate.cfg.SettingsFactory  - JPA-QL strict compliance: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Second-level cache: enabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Query cache: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Cache provider: org.hibernate.cache.NoCacheProvider
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Optimize cache for minimal puts: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Structured second-level cache entries: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Statistics: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Deleted entity synthetic identifier rollback: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Default entity-mode: pojo
+[main] INFO  org.hibernate.impl.SessionFactoryImpl  - building session factory
+[main] INFO  org.hibernate.impl.SessionFactoryObjectFactory  - Factory name: foo
+[main] INFO  org.hibernate.util.NamingHelper  - JNDI InitialContext properties:{}
+[main] INFO  org.hibernate.impl.SessionFactoryObjectFactory  - Bound factory to JNDI name: foo
+[main] WARN  org.hibernate.impl.SessionFactoryObjectFactory  - InitialContext did not implement EventContext
+[main] INFO  de.fhg.fokus.diameter.DiameterPeer.DiameterPeer  - Bean style constructor called, don't forget to configure!
+[main] INFO  de.fhg.fokus.diameter.DiameterPeer.DiameterPeer  - FQDN: hss.ims.mnc001.mcc001.3gppnetwork.org
+[main] INFO  de.fhg.fokus.diameter.DiameterPeer.DiameterPeer  - Realm: ims.mnc001.mcc001.3gppnetwork.org
+[main] INFO  de.fhg.fokus.diameter.DiameterPeer.DiameterPeer  - Vendor_ID : 10415
+[main] INFO  de.fhg.fokus.diameter.DiameterPeer.DiameterPeer  - Product Name: JavaDiameterPeer
+[main] INFO  de.fhg.fokus.diameter.DiameterPeer.DiameterPeer  - AcceptUnknwonPeers: true
+[main] INFO  de.fhg.fokus.diameter.DiameterPeer.DiameterPeer  - DropUnknownOnDisconnect: true
+[main] INFO  de.fhg.fokus.hss.main.HSSContainer  - 
+Type "exit" to stop FHoSS!
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.checkBounds(String.java:371)
+	at java.lang.String.<init>(String.java:535)
+	at de.fhg.fokus.hss.main.HSSContainer.waitForExit(HSSContainer.java:137)
+	at de.fhg.fokus.hss.main.HSSContainer.main(HSSContainer.java:111)
+[0;36;49m27(74) INFO: cdp [tcp_accept.c:176]: accept_connection(): accept_connection(): new tcp connection accepted!
+[0;39;49m[0;36;49m25(72) INFO: cdp [receiver.c:186]: add_serviced_peer(): add_serviced_peer(): Adding serviced_peer_t to receiver for peer []
+[0;39;49m[0;36;49m25(72) INFO: cdp [receiver.c:246]: drop_serviced_peer(): drop_serviced_peer(): Dropping serviced_peer_t from receiver for peer [hss.ims.mnc001.mcc001.3gppnetwork.org]
+[0;39;49m[0;36;49m27(70) INFO: cdp [tcp_accept.c:176]: accept_connection(): accept_connection(): new tcp connection accepted!
+[0;39;49m[0;36;49m25(68) INFO: cdp [receiver.c:186]: add_serviced_peer(): add_serviced_peer(): Adding serviced_peer_t to receiver for peer []
+[0;39;49m[0;36;49m25(68) INFO: cdp [receiver.c:246]: drop_serviced_peer(): drop_serviced_peer(): Dropping serviced_peer_t from receiver for peer [hss.ims.mnc001.mcc001.3gppnetwork.org]
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1923]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1924]: print_all_dlgs(): printing 4096 dialogs
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1934]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:187]: reg_await_timer(): Looking for expired/useless at 85092719
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:232]: reg_await_timer(): [DONE] Looking for expired/useless at 85092719
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1923]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1924]: print_all_dlgs(): printing 4096 dialogs
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1934]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:187]: reg_await_timer(): Looking for expired/useless at 85092729
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:232]: reg_await_timer(): [DONE] Looking for expired/useless at 85092729
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1923]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1924]: print_all_dlgs(): printing 4096 dialogs
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1934]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:187]: reg_await_timer(): Looking for expired/useless at 85092739
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:232]: reg_await_timer(): [DONE] Looking for expired/useless at 85092739
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1923]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1924]: print_all_dlgs(): printing 4096 dialogs
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1934]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:187]: reg_await_timer(): Looking for expired/useless at 85092749
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:232]: reg_await_timer(): [DONE] Looking for expired/useless at 85092749
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1923]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1924]: print_all_dlgs(): printing 4096 dialogs
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_dialog [dlg_handlers.c:1934]: print_all_dlgs(): ********************[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:187]: reg_await_timer(): Looking for expired/useless at 85092759
+[0;39;49m[0;39;49m 5(48) DEBUG: ims_auth [authorize.c:232]: reg_await_timer(): [DONE] Looking for expired/useless at 85092759
+[0;39;49m[32m07/20 15:31:08.414[0m: [[33mdiam[0m] [1;33mERROR[0m: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'hss.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+[Thread-30] WARN  de.fhg.fokus.diameter.DiameterPeer.transport.Communicator  - Read 482 before Exception.

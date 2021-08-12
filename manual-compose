@@ -1,0 +1,57 @@
+mkdir mongodbdata
+mkdir dbdata
+
+set -a
+source .env
+docker network create --subnet=172.22.0.0/24 docker_open5gs_default
+docker run --env-file .env --env COMPONENT_NAME=ausf-1 -v /home/vagrant/docker_open5gs/ausf:/mnt/ausf -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 7777/tcp --ip $AUSF_IP --network docker_open5gs_default --name ausf --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env -v /home/vagrant/docker_open5gs/mongo:/mnt/mongo -v /home/vagrant/docker_open5gs/mongodbdata:/var/lib/mongodb -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 27017/udp --expose 27017/tcp --ip $MONGO_IP --network docker_open5gs_default --name mongo --rm docker_mongo &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=webui -v /home/vagrant/docker_open5gs/webui:/mnt/webui -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --ip $WEBUI_IP --expose 3000/tcp -p 3000:3000/tcp --network docker_open5gs_default --name webui --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=nrf-1 -v /home/vagrant/docker_open5gs/nrf:/mnt/nrf -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 7777/tcp --ip $NRF_IP --network docker_open5gs_default --name nrf --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=udr-1 -v /home/vagrant/docker_open5gs/udr:/mnt/udr -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 7777/tcp --ip $UDR_IP --network docker_open5gs_default --name udr --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=udm-1 -v /home/vagrant/docker_open5gs/udm:/mnt/udm -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 7777/tcp --ip $UDM_IP --network docker_open5gs_default --name udm --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=pcf-1 -v /home/vagrant/docker_open5gs/pcf:/mnt/pcf -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 7777/tcp --ip $PCF_IP --network docker_open5gs_default --name pcf --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=bsf-1 -v /home/vagrant/docker_open5gs/bsf:/mnt/bsf -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 7777/tcp --ip $BSF_IP --network docker_open5gs_default --name bsf --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=nssf-1 -v /home/vagrant/docker_open5gs/nssf:/mnt/nssf -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 7777/tcp --ip $NSSF_IP --network docker_open5gs_default --name nssf --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=smf-1 -v /home/vagrant/docker_open5gs/smf:/mnt/smf -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 3868/udp --expose 3868/tcp --expose 3868/sctp --expose 5868/udp --expose 5868/tcp --expose 5868/sctp --expose 8805/udp --expose 2123/udp --expose 7777/tcp --ip $SMF_IP --network docker_open5gs_default --name smf --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=upf-1 -v /home/vagrant/docker_open5gs/upf:/mnt/upf -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 8805/udp --expose 2152/udp --ip $UPF_IP --network docker_open5gs_default --cap-add NET_ADMIN --device=/dev/net/tun --sysctl net.ipv4.ip_forward=1 --name upf --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=hss-1 -v /home/vagrant/docker_open5gs/hss:/mnt/hss -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 3868/udp --expose 3868/tcp --expose 3868/sctp --expose 5868/udp --expose 5868/tcp --expose 5868/sctp --ip $HSS_IP --network docker_open5gs_default --name hss --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=sgwc-1 -v /home/vagrant/docker_open5gs/sgwc:/mnt/sgwc -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 2123/udp --expose 8805/udp --ip $SGWC_IP --network docker_open5gs_default --name sgwc --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=sgwu-1 -v /home/vagrant/docker_open5gs/sgwu:/mnt/sgwu -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 8805/udp --expose 2152/udp --ip $SGWU_IP --network docker_open5gs_default --name sgwu --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=amf-1 -v /home/vagrant/docker_open5gs/amf:/mnt/amf -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 7777/tcp --expose 38412/sctp --ip $AMF_IP --network docker_open5gs_default --name amf --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=mme-1 -v /home/vagrant/docker_open5gs/mme:/mnt/mme -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 3868/udp --expose 3868/tcp --expose 3868/sctp --expose 5868/udp --expose 5868/tcp --expose 5868/sctp --expose 36412/sctp --expose 2123/udp --ip $MME_IP --network docker_open5gs_default --name mme --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=pcrf-1 -v /home/vagrant/docker_open5gs/pcrf:/mnt/pcrf -v /home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 3868/udp --expose 3868/tcp --expose 3868/sctp --expose 5868/udp --expose 5868/tcp --expose 5868/sctp --ip $PCRF_IP --network docker_open5gs_default --name pcrf --rm docker_open5gs &
+sleep $1s
+docker run --env-file .env -v /home/vagrant/docker_open5gs/dns:/mnt/dns -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 53/udp --ip $DNS_IP --network docker_open5gs_default --name dns --rm docker_dns &
+sleep $1s
+docker run --env-file .env --env TABLE=0 --env INTERFACE=${RTPENGINE_IP} --env LISTEN_NG=${RTPENGINE_IP}:2223 --env PIDFILE=/run/ngcp-rtpengine-daemon.pid --env PORT_MAX=50000 --env PORT_MIN=49000 --env NO_FALLBACK=no --env TOS=184 -v /home/vagrant/docker_open5gs/rtpengine:/mnt/rtpengine -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 2223/udp --expose 49000-50000/udp --ip $RTPENGINE_IP --network docker_open5gs_default --name rtpengine --cap-add NET_ADMIN --privileged --rm docker_rtpengine &
+sleep $1s
+docker run --env-file .env -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 3306/tcp --ip $MYSQL_IP --network docker_open5gs_default --name mysql --rm docker_mysql &
+sleep $1s
+docker run --env-file .env -v /home/vagrant/docker_open5gs/fhoss:/mnt/fhoss -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --ip $FHOSS_IP --expose 3868/udp --expose 3868/tcp -p 8080:8080/tcp --dns $DNS_IP --network docker_open5gs_default --name fhoss --rm docker_fhoss &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=icscf-1 -v /home/vagrant/docker_open5gs/icscf:/mnt/icscf -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 3869/udp --expose 3869/tcp --expose 4060/udp --expose 4060/tcp --ip $ICSCF_IP --dns $DNS_IP --network docker_open5gs_default --name icscf --rm docker_kamailio &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=scscf-1 -v /home/vagrant/docker_open5gs/scscf:/mnt/scscf -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 3870/udp --expose 3870/tcp --expose 6060/udp --expose 6060/tcp --ip $SCSCF_IP --dns $DNS_IP --network docker_open5gs_default --name scscf --rm docker_kamailio &
+sleep $1s
+docker run --env-file .env --env COMPONENT_NAME=pcscf-1 -v /home/vagrant/docker_open5gs/pcscf:/mnt/pcscf -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --expose 5060/udp --expose 5060/tcp --expose 3871/udp --expose 3871/tcp --expose 5100-5120/tcp --expose 5100-5120/udp --expose 6100-6120/udp --expose 6100-6120/tcp --ip $PCSCF_IP --dns $DNS_IP --network docker_open5gs_default --cap-add NET_ADMIN --name pcscf --rm docker_kamailio &
+sleep 15s
+docker run -d --env-file .env --env COMPONENT_NAME=ueransim-gnb-1 -v /home/vagrant/docker_open5gs/ueransim:/mnt/ueransim -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --ip $NR_GNB_IP --expose 38412/sctp --expose 2152/udp --expose 4997/udp --network docker_open5gs_default --cap-add NET_ADMIN --device=/dev/net/tun --name nr_gnb -i -t --rm docker_ueransim &
+sleep $1s
+docker run -d --env-file .env --env COMPONENT_NAME=ueransim-ue-1 -v /home/vagrant/docker_open5gs/ueransim:/mnt/ueransim -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro --ip $NR_UE_IP --expose 4997/udp --network docker_open5gs_default --cap-add NET_ADMIN --device=/dev/net/tun --name nr_ue -i -t --rm docker_ueransim &

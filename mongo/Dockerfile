@@ -30,6 +30,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends mongodb && \
+    apt-get install -y net-tools iproute2 iputils-ping &&\
     apt-get autoremove -y && apt-get autoclean
 
 CMD /mnt/mongo/mongo_init.sh

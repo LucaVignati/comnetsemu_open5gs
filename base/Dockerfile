@@ -91,6 +91,8 @@ RUN apt-get update && \
         ifupdown \
         net-tools \
         iputils-ping \
+        iproute2 \
+        tcpdump \
         python3-setuptools \
         python3-wheel \
         python3-pip \
@@ -113,4 +115,4 @@ COPY --from=builder /open5gs/webui /open5gs/webui
 WORKDIR open5gs
 
 COPY open5gs_init.sh /
-CMD /open5gs_init.sh
+CMD /open5gs_init.sh && bash

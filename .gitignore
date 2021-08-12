@@ -1,1 +1,5 @@
 log/
+mongodbdata/
+.docker/
+.ash_history
+.bash_history

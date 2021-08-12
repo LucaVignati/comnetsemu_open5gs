@@ -26,6 +26,8 @@
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+sleep 15s
+
 cp /mnt/dns/epc_zone /etc/bind
 cp /mnt/dns/ims_zone /etc/bind
 cp /mnt/dns/named.conf /etc/bind
@@ -46,6 +48,8 @@ sed -i 's|FHOSS_IP|'$FHOSS_IP'|g' /etc/bind/ims_zone
 
 sed -i 's|EPC_DOMAIN|'$EPC_DOMAIN'|g' /etc/bind/named.conf
 sed -i 's|IMS_DOMAIN|'$IMS_DOMAIN'|g' /etc/bind/named.conf
+
+/usr/sbin/named -c /etc/bind/named.conf -g -u bind
 
 # Sync docker time
 #ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
