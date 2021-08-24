@@ -5,14 +5,7 @@ Docker files to build and run open5gs in a docker
 
 Docker host machine
 
-- Ubuntu 18.04 and 20.04
-
-SDRs tested with srsLTE eNB
-
-- Ettus USRP B210
-- LimeSDR Mini v1.3
-
-UERANSIM (gNB + UE) simulator
+- Ubuntu 18.04
 
 ## Build and Execution Instructions
 
@@ -21,38 +14,25 @@ UERANSIM (gNB + UE) simulator
 	* [docker-compose](https://docs.docker.com/compose)
 
 
-Clone repository and build base docker image of open5gs, kamailio, ueransim
+Clone repository in the comnetsemu VM and build base docker image of open5gs and ueransim
 
 ```
 git clone https://github.com/herlesupreeth/docker_open5gs
 cd docker_open5gs/base
 docker build --no-cache --force-rm -t docker_open5gs .
 
-cd ../ims_base
-docker build --no-cache --force-rm -t docker_kamailio .
-
 cd ../ueransim
 docker build --no-cache --force-rm -t docker_ueransim .
 ```
 
-### Build and Run using docker-compose
+### Build using docker-compose
 
 ```
 cd ..
 set -a
 source .env
 docker-compose build --no-cache
-docker-compose up
 
-# srsLTE eNB
-docker-compose -f srsenb.yaml build --no-cache
-docker-compose -f srsenb.yaml up -d && docker attach srsenb
-
-# UERANSIM gNB
-docker-compose -f nr-gnb.yaml up -d && docker attach nr_gnb
-
-# UERANSIM NR-UE
-docker-compose -f nr-ue.yaml up -d && docker attach nr_ue
 ```
 
 ## Configuration
@@ -68,60 +48,85 @@ SGWU_ADVERTISE_IP --> Change this to value of DOCKER_HOST_IP set above only if e
 UPF_ADVERTISE_IP --> Change this to value of DOCKER_HOST_IP set above only if eNB/gNB is not running the same docker network/host
 ```
 
-If eNB/gNB is NOT running in the same docker network/host as the host running the dockerized Core/IMS then follow the below additional steps
+For more detailed instruction on different scenarios refer to the [docker_open5gs](https://github.com/herlesupreeth/docker_open5gs) github page
 
-Under mme section in docker compose file (docker-compose.yaml, nsa-deploy.yaml), uncomment the following part
-```
-...
-    # ports:
-    #   - "36412:36412/sctp"
-...
-```
+## Run experiments
 
-Under amf section in docker compose file (docker-compose.yaml, nsa-deploy.yaml, sa-deploy.yaml), uncomment the following part
+### Start the network topology:
 ```
-...
-    # ports:
-    #   - "38412:38412/sctp"
-...
+$ sudo python3 example1.py
 ```
 
-If deploying in SA mode only (sa-deploy.yaml), then uncomment the following part under upf section
-```
-...
-    # ports:
-    #   - "2152:2152/udp"
-...
-```
+The scenario includes 14 DockerHosts as shown in the figure below.
+The UE starts two PDU session one for each slice defined in the core network.
 
-If deploying in NSA mode only (nsa-deploy.yaml, docker-compose.yaml), then uncomment the following part under sgwu section
+<img src="./images/topology.jpg" title="./images/topology.jpg" width=1000px></img>
+
+Notice that at the first run the set-up should not work due to missing information in the 5GC.
+To configure it we should leverage the WebUI by opening the following page in a browser on the host OS.
 ```
-...
-    # ports:
-    #   - "2152:2152/udp"
-...
+http://[VM IP]:3000/
 ```
 
-## Register a UE information
+Login with username "admin" and password "1423"
 
-Open (http://<DOCKER_HOST_IP>:3000) in a web browser, where <DOCKER_HOST_IP> is the IP of the machine/VM running the open5gs containers. Login with following credentials
+The configuration is as follows:
+
+UE information:
+- IMSI = 001011234567895
+- USIM Type = OP
+- Operator Key (OPc/OP) = 11111111111111111111111111111111
+- key: '8baf473f2f8fd09487cccbd7097c6862'
+
+Slice 1 configuration
+- SST: 1
+- SD: 000001
+- Session-AMBR Downlink: 2 Mbps
+- Session-AMBR Uplink: 2 Mbps
+
+Slice 2 configuration
+- SST: 1
+- SD: 000001
+- Session-AMBR Downlink: 10 Mbps
+- Session-AMBR Uplink: 10 Mbps
+
+The configuration should look like this:
+
+<img src="./images/WebUI_config.JPG" title="./images/WebUI_config.JPG" width=800px></img>
+
+### Test the environment
+
+In two terminals start two tcpdump for both upf and upf_mec
+
+``` 
+$ ./start_tcpdump upf
+``` 
+
+#### Bandwidth test
+
+Enter in the UE container:
+``` 
+# ./enter_container nr_ue
+``` 
+
+Start bandwidth test leveraging the two slices:
+``` 
+iperf3 -c 192.168.100.1 -B 192.168.100.2 -t 5
+iperf3 -c 192.168.100.1 -B 192.168.100.3 -t 5
+``` 
+
+Open the open5gs WebUI and change the DL/UL bandwidth for slice 1.
+
+Update the PDU session in the UE. Notice how the session is started specifying the slice, not the APN. The APN, and thus the associated UPF, is selected by the 5GC.
+
 ```
-Username : admin
-Password : 1423
+# ./nr-cli imsi-001011234567895
+$ ps-establish IPv4 --sst 1 --sd 1
+$ status
 ```
+Exit with control-c
 
-Using Web UI, add a subscriber
-
-## srsLTE eNB settings
-
-If SGWU_ADVERTISE_IP is properly set to the host running the SGWU container in NSA deployment, then the following static route is not required.
-On the eNB, make sure to have the static route to SGWU container (since internal IP of the SGWU container is advertised in S1AP messages and UE wont find the core in Uplink)
-
+Start again a bandwidth test in the UE leveraging the new PDU session:
+``` 
+iperf3 -c 192.168.100.1 -B 192.168.100.4 -t 5
 ```
-# NSA - 4G5G Hybrid deployment
-ip r add <SGWU_CONTAINER_IP> via <SGWU_ADVERTISE_IP>
-```
-
-## Not supported
-- IPv6 usage in Docker
-
