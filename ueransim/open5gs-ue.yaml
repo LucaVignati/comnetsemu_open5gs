@@ -29,6 +29,11 @@ sessions:
     slice:
       sst: 1
     emergency: false
+  - type: 'IPv4'
+    apn: 'internet'
+    slice:
+      sst: 2
+    emergency: false
 
 # Configured NSSAI for this UE by HPLMN
 configured-nssai:

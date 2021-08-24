@@ -92,6 +92,7 @@ RUN apt-get update && \
         net-tools \
         iputils-ping \
         iproute2 \
+        iperf3 \
         tcpdump \
         python3-setuptools \
         python3-wheel \

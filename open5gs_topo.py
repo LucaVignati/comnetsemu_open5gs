@@ -246,59 +246,59 @@ def run_net():
     )
     net.addLink(upf, s1, bw=1000, delay="1ms", intfName1="upf-s1", intfName2="s1-upf")
 
-    env["COMPONENT_NAME"]="hss-1"
-    hss = net.addDockerHost(
-        "hss",
-        dimage="docker_open5gs",
-        dcmd="/open5gs_init.sh",
-        ip=os.environ["HSS_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/home/vagrant/docker_open5gs/hss:/mnt/hss:rw",
-                "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ]
-        },
-    )
-    net.addLink(hss, s1, bw=1000, delay="1ms", intfName1="hss-s1", intfName2="s1-hss")
+    # env["COMPONENT_NAME"]="hss-1"
+    # hss = net.addDockerHost(
+    #     "hss",
+    #     dimage="docker_open5gs",
+    #     dcmd="/open5gs_init.sh",
+    #     ip=os.environ["HSS_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/home/vagrant/docker_open5gs/hss:/mnt/hss:rw",
+    #             "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ]
+    #     },
+    # )
+    # net.addLink(hss, s1, bw=1000, delay="1ms", intfName1="hss-s1", intfName2="s1-hss")
 
-    env["COMPONENT_NAME"]="sgwc-1"
-    sgwc = net.addDockerHost(
-        "sgwc",
-        dimage="docker_open5gs",
-        dcmd="/open5gs_init.sh",
-        ip=os.environ["SGWC_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/home/vagrant/docker_open5gs/sgwc:/mnt/sgwc:rw",
-                "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ]
-        },
-    )
-    net.addLink(sgwc, s1, bw=1000, delay="1ms", intfName1="sgwc-s1", intfName2="s1-sgwc")
+    # env["COMPONENT_NAME"]="sgwc-1"
+    # sgwc = net.addDockerHost(
+    #     "sgwc",
+    #     dimage="docker_open5gs",
+    #     dcmd="/open5gs_init.sh",
+    #     ip=os.environ["SGWC_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/home/vagrant/docker_open5gs/sgwc:/mnt/sgwc:rw",
+    #             "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ]
+    #     },
+    # )
+    # net.addLink(sgwc, s1, bw=1000, delay="1ms", intfName1="sgwc-s1", intfName2="s1-sgwc")
 
-    env["COMPONENT_NAME"]="sgwu-1"
-    sgwu = net.addDockerHost(
-        "sgwu",
-        dimage="docker_open5gs",
-        dcmd="/open5gs_init.sh",
-        ip=os.environ["SGWU_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/home/vagrant/docker_open5gs/sgwu:/mnt/sgwu:rw",
-                "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ]
-        },
-    )
-    net.addLink(sgwu, s1, bw=1000, delay="1ms", intfName1="sgwu-s1", intfName2="s1-sgwu")
+    # env["COMPONENT_NAME"]="sgwu-1"
+    # sgwu = net.addDockerHost(
+    #     "sgwu",
+    #     dimage="docker_open5gs",
+    #     dcmd="/open5gs_init.sh",
+    #     ip=os.environ["SGWU_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/home/vagrant/docker_open5gs/sgwu:/mnt/sgwu:rw",
+    #             "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ]
+    #     },
+    # )
+    # net.addLink(sgwu, s1, bw=1000, delay="1ms", intfName1="sgwu-s1", intfName2="s1-sgwu")
 
     env["COMPONENT_NAME"]="amf-1"
     amf = net.addDockerHost(
@@ -318,172 +318,172 @@ def run_net():
     )
     net.addLink(amf, s1, bw=1000, delay="1ms", intfName1="amf-s1", intfName2="s1-amf")
 
-    env["COMPONENT_NAME"]="mme-1"
-    mme = net.addDockerHost(
-        "mme",
-        dimage="docker_open5gs",
-        dcmd="/open5gs_init.sh",
-        ip=os.environ["MME_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/home/vagrant/docker_open5gs/mme:/mnt/mme:rw",
-                "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ]
-        },
-    )
-    net.addLink(mme, s1, bw=1000, delay="1ms", intfName1="mme-s1", intfName2="s1-mme")
+    # env["COMPONENT_NAME"]="mme-1"
+    # mme = net.addDockerHost(
+    #     "mme",
+    #     dimage="docker_open5gs",
+    #     dcmd="/open5gs_init.sh",
+    #     ip=os.environ["MME_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/home/vagrant/docker_open5gs/mme:/mnt/mme:rw",
+    #             "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ]
+    #     },
+    # )
+    # net.addLink(mme, s1, bw=1000, delay="1ms", intfName1="mme-s1", intfName2="s1-mme")
 
-    env["COMPONENT_NAME"]="pcrf-1"
-    pcrf = net.addDockerHost(
-        "pcrf",
-        dimage="docker_open5gs",
-        dcmd="/open5gs_init.sh",
-        ip=os.environ["PCRF_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/home/vagrant/docker_open5gs/pcrf:/mnt/pcrf:rw",
-                "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ]
-        },
-    )
-    net.addLink(pcrf, s1, bw=1000, delay="1ms", intfName1="pcrf-s1", intfName2="s1-pcrf")
+    # env["COMPONENT_NAME"]="pcrf-1"
+    # pcrf = net.addDockerHost(
+    #     "pcrf",
+    #     dimage="docker_open5gs",
+    #     dcmd="/open5gs_init.sh",
+    #     ip=os.environ["PCRF_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/home/vagrant/docker_open5gs/pcrf:/mnt/pcrf:rw",
+    #             "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ]
+    #     },
+    # )
+    # net.addLink(pcrf, s1, bw=1000, delay="1ms", intfName1="pcrf-s1", intfName2="s1-pcrf")
 
-    dns = net.addDockerHost(
-        "dns",
-        dimage="docker_dns",
-        dcmd="/mnt/dns/dns_init.sh",
-        ip=os.environ["DNS_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/home/vagrant/docker_open5gs/dns:/mnt/dns:rw",
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ]
-        },
-    )
-    net.addLink(dns, s1, bw=1000, delay="1ms", intfName1="dns-s1", intfName2="s1-dns")
+    # dns = net.addDockerHost(
+    #     "dns",
+    #     dimage="docker_dns",
+    #     dcmd="/mnt/dns/dns_init.sh",
+    #     ip=os.environ["DNS_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/home/vagrant/docker_open5gs/dns:/mnt/dns:rw",
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ]
+    #     },
+    # )
+    # net.addLink(dns, s1, bw=1000, delay="1ms", intfName1="dns-s1", intfName2="s1-dns")
 
-    env["TABLE"]="0"
-    env["INTERFACE"]=os.environ["RTPENGINE_IP"]
-    env["LISTEN_NG"]=os.environ["RTPENGINE_IP"] + "2223"
-    env["PIDFILE"]="/run/ngcp-rtpengine-daemon.pid"
-    env["PORT_MAX"]="50000"
-    env["PORT_MIN"]="49000"
-    env["NO_FALLBACK"]="no"
-    env["TOS"]="184"
-    rtpengine = net.addDockerHost(
-        "rtpengine",
-        dimage="docker_rtpengine",
-        dcmd="/mnt/rtpengine/rtpengine_init.sh",
-        ip=os.environ["RTPENGINE_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/home/vagrant/docker_open5gs/rtpengine:/mnt/rtpengine:rw",
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ],
-            "cap_add": "NET_ADMIN"
-        },
-    )
-    net.addLink(rtpengine, s1, bw=1000, delay="1ms", intfName1="rtpengine-s1", intfName2="s1-rtpengine")
+    # env["TABLE"]="0"
+    # env["INTERFACE"]=os.environ["RTPENGINE_IP"]
+    # env["LISTEN_NG"]=os.environ["RTPENGINE_IP"] + "2223"
+    # env["PIDFILE"]="/run/ngcp-rtpengine-daemon.pid"
+    # env["PORT_MAX"]="50000"
+    # env["PORT_MIN"]="49000"
+    # env["NO_FALLBACK"]="no"
+    # env["TOS"]="184"
+    # rtpengine = net.addDockerHost(
+    #     "rtpengine",
+    #     dimage="docker_rtpengine",
+    #     dcmd="/mnt/rtpengine/rtpengine_init.sh",
+    #     ip=os.environ["RTPENGINE_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/home/vagrant/docker_open5gs/rtpengine:/mnt/rtpengine:rw",
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ],
+    #         "cap_add": "NET_ADMIN"
+    #     },
+    # )
+    # net.addLink(rtpengine, s1, bw=1000, delay="1ms", intfName1="rtpengine-s1", intfName2="s1-rtpengine")
 
-    env = dict(dotenv_values(".env"))
-    mysql = net.addDockerHost(
-        "mysql",
-        dimage="docker_mysql",
-        dcmd="/mysql_init.sh",
-        ip=os.environ["MYSQL_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ]
-        },
-    )
-    net.addLink(mysql, s1, bw=1000, delay="1ms", intfName1="mysql-s1", intfName2="s1-mysql")
+    # env = dict(dotenv_values(".env"))
+    # mysql = net.addDockerHost(
+    #     "mysql",
+    #     dimage="docker_mysql",
+    #     dcmd="/mysql_init.sh",
+    #     ip=os.environ["MYSQL_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ]
+    #     },
+    # )
+    # net.addLink(mysql, s1, bw=1000, delay="1ms", intfName1="mysql-s1", intfName2="s1-mysql")
 
-    env["COMPONENT_NAME"]="fhoss-1"
-    fhoss = net.addDockerHost(
-        "fhoss",
-        dimage="docker_fhoss",
-        dcmd="/mnt/fhoss/fhoss_init.sh",
-        ip=os.environ["FHOSS_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/home/vagrant/docker_open5gs/fhoss:/mnt/fhoss:rw",
-                "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ],
-            "dns": [os.environ["DNS_IP"]]
-        },
-    )
-    net.addLink(fhoss, s1, bw=1000, delay="1ms", intfName1="fhoss-s1", intfName2="s1-fhoss")
+    # env["COMPONENT_NAME"]="fhoss-1"
+    # fhoss = net.addDockerHost(
+    #     "fhoss",
+    #     dimage="docker_fhoss",
+    #     dcmd="/mnt/fhoss/fhoss_init.sh",
+    #     ip=os.environ["FHOSS_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/home/vagrant/docker_open5gs/fhoss:/mnt/fhoss:rw",
+    #             "/home/vagrant/docker_open5gs/log:/open5gs/install/var/log/open5gs:rw",
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ],
+    #         "dns": [os.environ["DNS_IP"]]
+    #     },
+    # )
+    # net.addLink(fhoss, s1, bw=1000, delay="1ms", intfName1="fhoss-s1", intfName2="s1-fhoss")
 
-    env["COMPONENT_NAME"]="icscf-1"
-    icscf = net.addDockerHost(
-        "icscf",
-        dimage="docker_kamailio",
-        dcmd="/kamailio_init.sh",
-        ip=os.environ["ICSCF_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/home/vagrant/docker_open5gs/icscf:/mnt/icscf:rw",
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ],
-            "dns": [os.environ["DNS_IP"]]
-        },
-    )
-    net.addLink(icscf, s1, bw=1000, delay="1ms", intfName1="icscf-s1", intfName2="s1-icscf")
+    # env["COMPONENT_NAME"]="icscf-1"
+    # icscf = net.addDockerHost(
+    #     "icscf",
+    #     dimage="docker_kamailio",
+    #     dcmd="/kamailio_init.sh",
+    #     ip=os.environ["ICSCF_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/home/vagrant/docker_open5gs/icscf:/mnt/icscf:rw",
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ],
+    #         "dns": [os.environ["DNS_IP"]]
+    #     },
+    # )
+    # net.addLink(icscf, s1, bw=1000, delay="1ms", intfName1="icscf-s1", intfName2="s1-icscf")
 
-    env["COMPONENT_NAME"]="scscf-1"
-    scscf = net.addDockerHost(
-        "scscf",
-        dimage="docker_kamailio",
-        dcmd="/kamailio_init.sh",
-        ip=os.environ["SCSCF_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/home/vagrant/docker_open5gs/scscf:/mnt/scscf:rw",
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ],
-            "dns": [os.environ["DNS_IP"]]
-        },
-    )
-    net.addLink(scscf, s1, bw=1000, delay="1ms", intfName1="scscf-s1", intfName2="s1-scscf")
+    # env["COMPONENT_NAME"]="scscf-1"
+    # scscf = net.addDockerHost(
+    #     "scscf",
+    #     dimage="docker_kamailio",
+    #     dcmd="/kamailio_init.sh",
+    #     ip=os.environ["SCSCF_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/home/vagrant/docker_open5gs/scscf:/mnt/scscf:rw",
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ],
+    #         "dns": [os.environ["DNS_IP"]]
+    #     },
+    # )
+    # net.addLink(scscf, s1, bw=1000, delay="1ms", intfName1="scscf-s1", intfName2="s1-scscf")
 
-    env["COMPONENT_NAME"]="pcscf-1"
-    pcscf = net.addDockerHost(
-        "pcscf",
-        dimage="docker_kamailio",
-        dcmd="/kamailio_init.sh",
-        ip=os.environ["PCSCF_IP"] + "/24",
-        docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
-            "environment": env,
-            "volumes": [
-                "/home/vagrant/docker_open5gs/pcscf:/mnt/pcscf:rw",
-                "/etc/timezone:/etc/timezone:ro",
-                "/etc/localtime:/etc/localtime:ro"
-            ],
-            "dns": [os.environ["DNS_IP"]],
-            "cap_add": "NET_ADMIN"
-        },
-    )
-    net.addLink(pcscf, s1, bw=1000, delay="1ms", intfName1="pcscf-s1", intfName2="s1-pcscf")
+    # env["COMPONENT_NAME"]="pcscf-1"
+    # pcscf = net.addDockerHost(
+    #     "pcscf",
+    #     dimage="docker_kamailio",
+    #     dcmd="/kamailio_init.sh",
+    #     ip=os.environ["PCSCF_IP"] + "/24",
+    #     docker_args={"cpuset_cpus": "0", "nano_cpus": int(1e8),
+    #         "environment": env,
+    #         "volumes": [
+    #             "/home/vagrant/docker_open5gs/pcscf:/mnt/pcscf:rw",
+    #             "/etc/timezone:/etc/timezone:ro",
+    #             "/etc/localtime:/etc/localtime:ro"
+    #         ],
+    #         "dns": [os.environ["DNS_IP"]],
+    #         "cap_add": "NET_ADMIN"
+    #     },
+    # )
+    # net.addLink(pcscf, s1, bw=1000, delay="1ms", intfName1="pcscf-s1", intfName2="s1-pcscf")
 
     env["COMPONENT_NAME"]="ueransim-gnb-1"
     nr_gnb = net.addDockerHost(
