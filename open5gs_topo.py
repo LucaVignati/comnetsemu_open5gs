@@ -44,6 +44,8 @@ def run_net():
 
     info("*** Adding switch\n")
     s1 = net.addSwitch("s1")
+    s2 = net.addSwitch("s2")
+    net.addLink(s1, s2, bw=1000, delay="1ms", intfName1="s1-s2", intfName2="s2-s1")
 
     info("*** Adding hosts\n")
     env["COMPONENT_NAME"]="ausf-1"
@@ -502,7 +504,7 @@ def run_net():
             "devices": "/dev/net/tun:/dev/net/tun:rwm"
         },
     )
-    net.addLink(nr_gnb, s1, bw=1000, delay="1ms", intfName1="nr_gnb-s1", intfName2="s1-nr_gnb")
+    net.addLink(nr_gnb, s2, bw=1000, delay="1ms", intfName1="nr_gnb-s1", intfName2="s1-nr_gnb")
 
     env["COMPONENT_NAME"]="ueransim-ue-1"
     nr_ue = net.addDockerHost(
@@ -521,7 +523,7 @@ def run_net():
             "devices": "/dev/net/tun:/dev/net/tun:rwm"
         },
     )
-    net.addLink(nr_ue, s1, bw=1000, delay="1ms", intfName1="nr_ue-s1", intfName2="s1-nr_ue")
+    net.addLink(nr_ue, s2, bw=1000, delay="1ms", intfName1="nr_ue-s1", intfName2="s1-nr_ue")
 
 
 
