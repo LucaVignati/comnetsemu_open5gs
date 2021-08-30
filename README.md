@@ -54,7 +54,7 @@ For more detailed instruction on different scenarios refer to the [docker_open5g
 
 ### Start the network topology:
 ```
-$ sudo python3 example1.py
+$ sudo python3 open5gs_topo.py
 ```
 
 The scenario includes 14 DockerHosts, one for each network function:
@@ -74,6 +74,9 @@ The scenario includes 14 DockerHosts, one for each network function:
 * NR_UE
 
 They are all connected to a central switch.
+
+<img src="./images/comnetsemu_open5gs_topology.png" title="./images/comnetsemu_open5gs_topology.png" width=1000px></img>
+
 The UE starts two PDU session one for each slice defined in the core network.
 
 Notice that at the first run the set-up should not work due to missing information in the 5GC.
