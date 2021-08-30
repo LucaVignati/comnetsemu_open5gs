@@ -29,6 +29,7 @@
 sleep 15s
 
 sed -i "s/127.0.0.1/0.0.0.0/g" /etc/mysql/mysql.conf.d/mysqld.cnf
+sed -i "s/# max_connections        = 151/max_connections        = 250/g" /etc/mysql/mysql.conf.d/mysqld.cnf
 cat > ~/.my.cnf <<EOF
 [mysql]
 user=root
@@ -54,7 +55,6 @@ then
 	mysql -u root -e "GRANT ALL ON *.* TO 'root'@'%' WITH GRANT OPTION";
 	mysql -u root -e "ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY ''"
 	mysql -u root -e "FLUSH PRIVILEGES;"
-	mysql -u root -e "SET GLOBAL max_connections=200;"
 fi
 
 pkill -9 mysqld
