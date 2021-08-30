@@ -57,10 +57,24 @@ For more detailed instruction on different scenarios refer to the [docker_open5g
 $ sudo python3 example1.py
 ```
 
-The scenario includes 14 DockerHosts as shown in the figure below.
-The UE starts two PDU session one for each slice defined in the core network.
+The scenario includes 14 DockerHosts, one for each network function:
+* AMF
+* AUSF
+* BSF
+* MONGO
+* NRF
+* NSSF
+* PCF
+* SMF
+* UDM
+* UDR
+* UPF
+* WEBUI
+* NR_GNB
+* NR_UE
 
-<img src="./images/topology.jpg" title="./images/topology.jpg" width=1000px></img>
+They are all connected to a central switch.
+The UE starts two PDU session one for each slice defined in the core network.
 
 Notice that at the first run the set-up should not work due to missing information in the 5GC.
 To configure it we should leverage the WebUI by opening the following page in a browser on the host OS.
