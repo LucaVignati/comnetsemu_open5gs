@@ -57,23 +57,7 @@ For more detailed instruction on different scenarios refer to the [docker_open5g
 $ sudo python3 open5gs_topo.py
 ```
 
-The scenario includes 14 DockerHosts, one for each network function:
-* AMF
-* AUSF
-* BSF
-* MONGO
-* NRF
-* NSSF
-* PCF
-* SMF
-* UDM
-* UDR
-* UPF
-* WEBUI
-* NR_GNB
-* NR_UE
-
-They are all connected to a central switch.
+The scenario includes 14 DockerHosts, one for each network function. All 12 components are connected to a switch, while the UE and gNB are connected to another switch.
 
 <img src="./images/comnetsemu_open5gs_topology.png" title="./images/comnetsemu_open5gs_topology.png" width=1000px></img>
 
